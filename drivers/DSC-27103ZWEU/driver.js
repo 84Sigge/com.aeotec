@@ -58,33 +58,6 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 			},
 		},
 	},
-	measure_power: {
-		command_class: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
-		command_get: 'SENSOR_MULTILEVEL_GET',
-		command_report: 'SENSOR_MULTILEVEL_REPORT',
-		command_report_parser: report => {
-			if (report['Sensor Type'] !== 'Power (version 2)') return null;
-			return report['Sensor Value (Parsed)'];
-		},
-	},
-	meter_power: {
-		command_class: 'COMMAND_CLASS_METER',
-		command_get: 'METER_GET',
-		command_get_parser: () => ({
-			Properties1: {
-				Scale: 0,
-			},
-		}),
-		command_report: 'METER_REPORT',
-		command_report_parser: report => {
-			if (report.hasOwnProperty('Properties2') &&
-				report.Properties2.hasOwnProperty('Scale bits 10') &&
-				report.Properties2['Scale bits 10'] === 0) {
-				return report['Meter Value (Parsed)'];
-			}
-			return null;
-		},
-	},
 	settings: {
 		Notification: {
 			index: 80,
