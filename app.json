@@ -70,7 +70,47 @@
             "nl": "Druk kort op de actie knop op de Switch."
           }
         }
-      }
+      },
+      "associationGroups": [
+        1,
+        2
+      ],
+        "defaultConfiguration": [
+          {
+            "id": 3,
+            "size": 1,
+            "value": 1
+          },
+          {"id": 80,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
     },
     {
       "id": "DSC-27103ZWEU",
@@ -87,22 +127,68 @@
         "small": "/drivers/DSC-27103ZWEU/assets/images/small.png"
       },
       "zwave": {
-        "manufacturerId": [
-          134
-        ],
-        "productTypeId": [
-          3
-        ],
-        "productId": [
-          27
-        ],
+        "manufacturerId": 134,
+        "productTypeId": 3,
+        "productId": 27,
         "learnmode": {
           "instruction": {
             "en": "Short press the action button on the Dimmer.",
             "nl": "Druk kort op de actie knop op de Dimmer."
           }
         }
-      }
+      },
+      "associationGroups": [
+        1,
+        2
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "Z-wave Lifeline Group"
+          }
+        },
+        "2": {
+          "hint": {
+            "en": "Z-wave Retransmit Group"
+          }
+        }
+      },
+        "defaultConfiguration": [
+          {
+            "id": 3,
+            "size": 1,
+            "value": 1
+          },
+          {"id": 80,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 5
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 123
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 3
+          }
+        ]
     },
     {
       "id": "DSC18103-ZWEU",
@@ -135,7 +221,48 @@
             "nl": "Druk kort op de actie knop op de Switch."
           }
         }
-      }
+      },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 3,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 80,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
     },
     {
       "id": "DSC19103-ZWEU",
@@ -169,7 +296,48 @@
             "nl": "Druk kort op de actie knop op de Dimmer."
           }
         }
-      }
+      },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 3,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 80,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
     },
     {
       "id": "DSA38",
