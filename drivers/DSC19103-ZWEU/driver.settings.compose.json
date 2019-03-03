@@ -1,0 +1,124 @@
+[
+  {
+    "id": "3",
+    "type": "dropdown",
+    "label": {
+      "en": "Overload Protection",
+      "nl": "Overbelastingsbeveiliging"
+    },
+    "hint": {
+      "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+      "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "nl": "Uitgeschakeld"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Enabled",
+          "nl": "Geactiveerd"
+        }
+      }
+    ]
+  },
+  {
+    "id": "91",
+    "type": "number",
+    "label": {
+      "en": "Minimum wattage change needed before an update report is send",
+      "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+    },
+    "hint": {
+      "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
+      "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
+    },
+    "zwave": {
+      "index": 91,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32000
+    },
+    "value": 25
+  },
+  {
+    "id": "92",
+    "type": "number",
+    "label": {
+      "en": "Minimum wattage change (%) needed before an update report is send",
+      "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+    },
+    "hint": {
+      "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
+      "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
+    },
+    "zwave": {
+      "index": 92,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "value": 30
+  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input 1",
+      "nl": "Schakelaar type input 1"
+    },
+    "hint": {
+      "en": "This parameter (120) determines the input device mode for input 1.",
+      "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "255",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch"
+        }
+      },
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+        }
+      }
+    ]
+  }
+]
