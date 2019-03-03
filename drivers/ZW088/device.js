@@ -14,18 +14,17 @@ const sceneMap = {
 };
 
 class AeotecKeyFobDevice extends ZwaveDevice {
-	
+
 	onMeshInit() {
-		this._press1Trigger = new Homey.FlowCardTriggerDevice('zw088_press_1').register();
-        this._press2Trigger = new Homey.FlowCardTriggerDevice('zw088_press_2').register();
-        this._press3Trigger = new Homey.FlowCardTriggerDevice('zw088_press_3').register();
-        this._press4Trigger = new Homey.FlowCardTriggerDevice('zw088_press_4').register();
+		this._press1Trigger = this.getDriver().press1Trigger;
+        this._press2Trigger = this.getDriver().press2Trigger;
+        this._press3Trigger = this.getDriver().press3Trigger;
+        this._press4Trigger = this.getDriver().press4Trigger;
 
-        this._hold1Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_1').register();
-        this._hold2Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_2').register();
-        this._hold3Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_3').register();
-        this._hold4Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_4').register();
-
+        this._hold1Trigger = this.getDriver().hold1Trigger;
+        this._hold2Trigger = this.getDriver().hold2Trigger;
+        this._hold3Trigger = this.getDriver().hold3Trigger;
+        this._hold4Trigger = this.getDriver().hold4Trigger;
 
         this.registerSetting('measure_battery', 'BATTERY', {
 			pollInterval: 'poll_interval'

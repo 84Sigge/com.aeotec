@@ -1,12 +1,10 @@
 {
   "id": "ZW132",
   "name": {
-    "en": "Dual Nano Switch (ZW132)"
+    "en": "Dual Nano Switch (ZW140)"
   },
   "class": "light",
   "capabilities": [
-    "measure_power",
-    "meter_power",
     "onoff"
   ],
   "images": {

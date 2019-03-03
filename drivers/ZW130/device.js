@@ -6,24 +6,21 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class ZW130 extends ZwaveDevice {
 
 	onMeshInit() {
-		this._batteryTrigger = new Homey.FlowCardTriggerDevice('zw130_battery_full')
-			.register();
-		this._sceneTrigger = new Homey.FlowCardTriggerDevice('zw130_scene')
-			.registerRunListener(this._sceneRunListener.bind(this)).register();
-		this._dimTrigger = new Homey.FlowCardTriggerDevice('zw130_dim')
-			.registerRunListener(this._dimRunListener.bind(this)).register();
+        this._batteryTrigger = this.getDriver().batteryTrigger;
+        this._sceneTrigger = this.getDriver().sceneTrigger;
+        this._dimTrigger = this.getDriver().dimTrigger;
 
-		this.registerCapability('measure_battery', 'BATTERY', {
-			reportParser: (report) => {
-				if (report['Notification Type'] === 'Power Management') {
-					if (report.Event === 13) this._batteryTrigger.trigger(this, null, null);
-					if (report.Event === 15) return true;
-					return false;
-				}
-				return null;
-			},
-		});
-		this.registerCapability('alarm_battery', 'NOTIFICATION');
+		this.registerCapability('measure_battery', 'BATTERY');
+		this.registerCapability('alarm_battery', 'NOTIFICATION', {
+            reportParser: (report) => {
+                if (report['Notification Type'] === 'Power Management') {
+                    if (report.Event === 13) this._batteryTrigger.trigger(this, null, null);
+                    else if (report.Event === 15) return true;
+                    return false;
+                }
+                return null;
+            },
+        });
 
 		this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (report) => {
 			if (report.hasOwnProperty('Properties1') &&
@@ -62,23 +59,39 @@ class ZW130 extends ZwaveDevice {
 	}
 
 	async onSettings(oldSettings, newSettings, changedKeys) {
-		if (newSettings.rgb_name === 'custom') {
-			await this.configurationSet({
-				index: 5,
-				size: 4,
-			}, new Buffer([newSettings.rgb_r, newSettings.rgb_g, newSettings.rgb_b, 0]));
-		} else {
-			const valueArray = newSettings.rgb_name.split(',');
-			const multiplier = newSettings.rgb_name_level / 100 || 1;
+		super.onSettings(oldSettings, newSettings, changedKeys);
 
-			await this.configurationSet({
-				index: 5,
-				size: 4,
-			}, new Buffer(valueArray[0] * multiplier, valueArray[1] * multiplier, valueArray[2] * multiplier, 0));
-		}
-	}
+		if (changedKeys.includes('rgb_name')
+			|| changedKeys.includes('rgb_r')
+			|| changedKeys.includes('rgb_g')
+			|| changedKeys.includes('rgb_b')) {
+            this.log('color changed');
 
-	_sceneRunListener(args, state) {
+            if (newSettings.rgb_name === 'custom'
+                && newSettings.hasOwnProperty('rgb_r')
+                && newSettings.hasOwnProperty('rgb_g')
+                && newSettings.hasOwnProperty('rgb_b')) {
+            	this.log('custom color');
+                return await this.configurationSet({
+                    index: 5,
+                    size: 4,
+                }, new Buffer([newSettings.rgb_r, newSettings.rgb_g, newSettings.rgb_b, 0]));
+            }
+            this.log('listed color');
+
+            const valueArray = newSettings.rgb_name.split(',');
+            const multiplier = newSettings.rgb_name_level / 100 || 1;
+
+            return await this.configurationSet({
+                index: 5,
+                size: 4,
+            }, new Buffer([Math.round(valueArray[0] * multiplier), Math.round(valueArray[1] * multiplier), Math.round(valueArray[2] * multiplier), 0]));
+        }
+
+        this.log(changedKeys);
+    }
+
+	sceneRunListener(args, state) {
 		if (!args) return Promise.reject('No arguments provided');
 		if (!state) return Promise.reject('No state provided');
 
@@ -90,7 +103,7 @@ class ZW130 extends ZwaveDevice {
 		} return Promise.reject('Button or scene undefined in args or state');
 	}
 
-	_dimRunListener(args, state) {
+	dimRunListener(args, state) {
 		if (!args) return Promise.reject('No arguments provided');
 		if (!state) return Promise.reject('No state provided');
 

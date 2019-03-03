@@ -9,65 +9,72 @@ class AeotecGarageControllerDevice extends ZwaveDevice {
 			get: 'BARRIER_OPERATOR_GET',
 			report: 'BARRIER_OPERATOR_REPORT',
 			reportParser: report => {
-			    if (this.getSetting('flipped') === true) {
-			        return report.State === 'Closed'
+			    if (report && report.State) {
+			        let result = report.State === 'Closed';
+
+			        if (this.getSetting('flipped')) return !result;
+			        return result;
                 }
-                return report.State !== 'Closed';
             },
 			set: 'BARRIER_OPERATOR_SET',
 			setParser: (input) => {
-			    if (this.getSetting('flipped') === true) {
-			        return {'Target Value': (input) ? 'CLOSE' : 'OPEN'};
+			    if (this.getSetting('flipped')) {
+			        input = !input;
                 }
-                return {'Target Value': (input) ? 'OPEN' : 'CLOSE'};
+
+			    let result = {
+                    'Target Value': (input) ? 'CLOSE' : 'OPEN'
+                };
+
+                return result;
 			},
 		});
 	}
 
 	async onSettings(oldSettings, newSettings, changedKeys) {
-		if (changedKeys.indexOf('371') >= 0 ||
-            changedKeys.indexOf('372') >= 0 ||
-            changedKeys.indexOf('373') >= 0 ||
-            changedKeys.indexOf('374') >= 0) {
-				await this._setAlarmConfiguration(37, 4);
+	    super.onSettings(oldSettings, newSettings, changedKeys);
+
+		if (changedKeys.includes('371') ||
+            changedKeys.includes('372') ||
+            changedKeys.includes('373') ||
+            changedKeys.includes('374')) {
+				await this._setAlarmConfiguration(37, 4, [newSettings['371'], newSettings['372'], newSettings['373'], newSettings['374']]);
 		}
 
-        if (changedKeys.indexOf('381') >= 0 ||
-            changedKeys.indexOf('382') >= 0 ||
-            changedKeys.indexOf('383') >= 0 ||
-            changedKeys.indexOf('384') >= 0) {
-            await this._setAlarmConfiguration(38, 4);
+        if (changedKeys.includes('381') ||
+            changedKeys.includes('382') ||
+            changedKeys.includes('383') ||
+            changedKeys.includes('384')) {
+            await this._setAlarmConfiguration(38, 4, [newSettings['381'], newSettings['382'], newSettings['383'], newSettings['384']]);
         }
 
-        if (changedKeys.indexOf('391') >= 0 ||
-            changedKeys.indexOf('392') >= 0 ||
-            changedKeys.indexOf('393') >= 0 ||
-            changedKeys.indexOf('394') >= 0) {
-            await this._setAlarmConfiguration(39, 4);
+        if (changedKeys.includes('391') ||
+            changedKeys.includes('392') ||
+            changedKeys.includes('393') ||
+            changedKeys.includes('394')) {
+            await this._setAlarmConfiguration(39, 4, [newSettings['391'], newSettings['392'], newSettings['393'], newSettings['394']]);
         }
 
-        if (changedKeys.indexOf('401') >= 0 ||
-            changedKeys.indexOf('402') >= 0 ||
-            changedKeys.indexOf('403') >= 0 ||
-            changedKeys.indexOf('404') >= 0) {
-            await this._setAlarmConfiguration(40, 4);
+        if (changedKeys.includes('401') ||
+            changedKeys.includes('402') ||
+            changedKeys.includes('403') ||
+            changedKeys.includes('404')) {
+            await this._setAlarmConfiguration(40, 4, [newSettings['401'], newSettings['402'], newSettings['403'], newSettings['404']]);
         }
 	}
 
-	async _setAlarmConfiguration(parameter, size) {
-        await this.node.CommandClass.COMMAND_CLASS_CONFIGURATION.CONFIGURATION_SET({
-            'Parameter Number': parameter,
-            'Level': {
-                'Size': size,
-                'Default': false
-            },
-            'Configuration Value': new Buffer([
-                this.getSetting(`${parameter}1`),
-                this.getSetting(`${parameter}2`),
-                this.getSetting(`${parameter}3`),
-                this.getSetting(`${parameter}4`),
-            ])
-        });
+	async _setAlarmConfiguration(parameter, size, values) {
+	    this.log('Parameter:', parameter, "Size:", size, "Values:", values);
+
+        return await this.configurationSet({
+            index: parameter,
+            size: size,
+        }, new Buffer([
+            Number(values[0]),
+            Number(values[1]),
+            Number(values[2]),
+            Number(values[3]),
+        ]));
 	}
 }
 

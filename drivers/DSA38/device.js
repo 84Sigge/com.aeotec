@@ -8,10 +8,10 @@ const sceneMap = {
 };
 
 class AeotecPanicButtonDevice extends ZwaveDevice {
-	
+
 	onMeshInit() {
-		this._pressTrigger = new Homey.FlowCardTriggerDevice('dsa38_press_1').register();
-		this._holdTrigger = new Homey.FlowCardTriggerDevice('dsa38_hold_1').register();
+		this._pressTrigger = this.getDriver().pressTrigger;
+		this._holdTrigger = this.getDriver().holdTrigger;
 
 		this.registerCapability('measure_battery', 'BATTERY');
 
@@ -22,7 +22,7 @@ class AeotecPanicButtonDevice extends ZwaveDevice {
 			}
 		});
 	}
-	
+
 }
 
 module.exports = AeotecPanicButtonDevice;

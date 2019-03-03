@@ -6,22 +6,21 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class ZW129 extends ZwaveDevice {
 
 	onMeshInit() {
-		this._batteryTrigger = new Homey.FlowCardTriggerDevice('zw129_battery_full')
-			.register();
-		this._sceneTrigger = new Homey.FlowCardTriggerDevice('zw129_scene').registerRunListener(this._sceneRunListener.bind(this)).register();
-		this._dimTrigger = new Homey.FlowCardTriggerDevice('zw129_dim').registerRunListener(this._dimRunListener.bind(this)).register();
+		this._batteryTrigger = this.getDriver().batteryTrigger;
+		this._sceneTrigger = this.getDriver().sceneTrigger;
+		this._dimTrigger = this.getDriver().dimTrigger;
 
-		this.registerCapability('measure_battery', 'BATTERY', {
-			reportParser: (report) => {
-				if (report['Notification Type'] === 'Power Management') {
-					if (report.Event === 13) this._batteryTrigger.trigger(this, null, null);
-					if (report.Event === 15) return true;
-					return false;
-				}
-				return null;
-			},
-		});
-		this.registerCapability('alarm_battery', 'NOTIFICATION');
+		this.registerCapability('measure_battery', 'BATTERY');
+		this.registerCapability('alarm_battery', 'NOTIFICATION', {
+            reportParser: (report) => {
+                if (report['Notification Type'] === 'Power Management') {
+                    if (report.Event === 13) this._batteryTrigger.trigger(this, null, null);
+                    else if (report.Event === 15) return true;
+                    return false;
+                }
+                return null;
+            },
+        });
 
 		this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (report) => {
 			if (report.hasOwnProperty('Properties1') &&
@@ -60,6 +59,8 @@ class ZW129 extends ZwaveDevice {
 	}
 
 	async onSettings(oldSettings, newSettings, changedKeys) {
+		super.onSettings(oldSettings, newSettings, changedKeys);
+
 		if (newSettings.rgb_name === 'custom') {
 			await this.configurationSet({
 				index: 5,
@@ -76,7 +77,7 @@ class ZW129 extends ZwaveDevice {
 		}
 	}
 
-	_sceneRunListener(args, state) {
+	sceneRunListener(args, state) {
 		if (!args) return Promise.reject('No arguments provided');
 		if (!state) return Promise.reject('No state provided');
 
@@ -88,7 +89,7 @@ class ZW129 extends ZwaveDevice {
 		} return Promise.reject('Button or scene undefined in args or state');
 	}
 
-	_dimRunListener(args, state) {
+	dimRunListener(args, state) {
 		if (!args) return Promise.reject('No arguments provided');
 		if (!state) return Promise.reject('No state provided');
 

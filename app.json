@@ -3,9 +3,10 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.9",
+  "version": "2.0.26",
   "compatibility": ">=1.5.0",
   "sdk": 2,
+  "brandColor": "#00A2DA",
   "category": [
     "appliances",
     "lights",
@@ -604,6 +605,74 @@
                 }
               }
             ]
+          }
+        ]
+      },
+      {
+        "id": "zw098_rainbow",
+        "title": {
+          "en": "Rainbow color mode",
+          "nl": "Regenboog kleuren modus"
+        },
+        "hint": {
+          "en": "Number of cycles (0 - 254, where 0 is unlimited). Color transition speed (0 - 100, where 100 is fastest).",
+          "nl": "Aantal cycli (0 - 254, waarbij 0 oneindig is). Kleur overgangssnelheid (0 - 100, waarbij 100 het snelst is)."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW098"
+          },
+          {
+            "name": "cycles",
+            "type": "number",
+            "min": 0,
+            "max": 254,
+            "step": 1,
+            "placeholder": {
+              "en": "Number of cycles",
+              "nl": "Aantal cycli"
+            }
+          },
+          {
+            "name": "speed",
+            "type": "number",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "placeholder": {
+              "en": "Color transition speed",
+              "nl": "Kleur overgangssnelheid"
+            }
+          },
+          {
+            "name": "fadeType",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Smooth color transition",
+                  "nl": "Soepele kleur overgang"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Direct color transition",
+                  "nl": "Directe kleur overgang"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Fade out fade in color transition",
+                  "nl": "Langzaam gedimde kleur overgang"
+                }
+              }
+            ],
+            "value": "0"
           }
         ]
       }
@@ -1225,12 +1294,8 @@
                 "nl": "LED knipper snelheid"
               },
               "hint": {
-                "en": "This parameter (371) determines the blinking frequency of the LED light.",
-                "nl": "Deze parameter (371) bepaalt de snelheid van het knipperen van de LED."
-              },
-              "zwave": {
-                "index": 371,
-                "size": 4
+                "en": "This parameter (34) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (34) bepaalt de snelheid van het knipperen van de LED."
               },
               "attr": {
                 "min": 1,
@@ -1246,12 +1311,8 @@
                 "nl": "Geluid nummer"
               },
               "hint": {
-                "en": "This parameter (372) determines the sound played when the alarm goes off.",
-                "nl": "Deze parameter (372) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
-              },
-              "zwave": {
-                "index": 372,
-                "size": 4
+                "en": "This parameter (34) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (34) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
               },
               "attr": {
                 "min": 1
@@ -1266,12 +1327,8 @@
                 "nl": "Volume"
               },
               "hint": {
-                "en": "This parameter (373) determines the volume of the alarm.",
-                "nl": "Deze parameter (373) bepaalt het volume van het alarm."
-              },
-              "zwave": {
-                "index": 373,
-                "size": 4
+                "en": "This parameter (34) determines the volume of the alarm.",
+                "nl": "Deze parameter (34) bepaalt het volume van het alarm."
               },
               "attr": {
                 "min": 1,
@@ -1287,12 +1344,8 @@
                 "nl": "Alarm aan"
               },
               "hint": {
-                "en": "This parameter (374) determines whether or not the alarm is enabled.",
-                "nl": "Deze parameter (374) bepaalt of het alarm aan staat."
-              },
-              "zwave": {
-                "index": 374,
-                "size": 4
+                "en": "This parameter (34) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (34) bepaalt of het alarm aan staat."
               },
               "value": true
             }
@@ -1313,12 +1366,8 @@
                 "nl": "LED knipper snelheid"
               },
               "hint": {
-                "en": "This parameter (381) determines the blinking frequency of the LED light.",
-                "nl": "Deze parameter (381) bepaalt de snelheid van het knipperen van de LED."
-              },
-              "zwave": {
-                "index": 381,
-                "size": 1
+                "en": "This parameter (34) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (34) bepaalt de snelheid van het knipperen van de LED."
               },
               "attr": {
                 "min": 1,
@@ -1334,12 +1383,8 @@
                 "nl": "Geluid nummer"
               },
               "hint": {
-                "en": "This parameter (382) determines the sound played when the alarm goes off.",
-                "nl": "Deze parameter (382) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
-              },
-              "zwave": {
-                "index": 382,
-                "size": 1
+                "en": "This parameter (34) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (34) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
               },
               "attr": {
                 "min": 1
@@ -1354,12 +1399,8 @@
                 "nl": "Volume"
               },
               "hint": {
-                "en": "This parameter (383) determines the volume of the alarm.",
-                "nl": "Deze parameter (383) bepaalt het volume van het alarm."
-              },
-              "zwave": {
-                "index": 383,
-                "size": 1
+                "en": "This parameter (34) determines the volume of the alarm.",
+                "nl": "Deze parameter (34) bepaalt het volume van het alarm."
               },
               "attr": {
                 "min": 1,
@@ -1375,12 +1416,8 @@
                 "nl": "Alarm aan"
               },
               "hint": {
-                "en": "This parameter (384) determines whether or not the alarm is enabled.",
-                "nl": "Deze parameter (384) bepaalt of het alarm aan staat."
-              },
-              "zwave": {
-                "index": 384,
-                "size": 1
+                "en": "This parameter (34) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (34) bepaalt of het alarm aan staat."
               },
               "value": true
             }
@@ -1401,12 +1438,8 @@
                 "nl": "LED knipper snelheid"
               },
               "hint": {
-                "en": "This parameter (391) determines the blinking frequency of the LED light.",
-                "nl": "Deze parameter (391) bepaalt de snelheid van het knipperen van de LED."
-              },
-              "zwave": {
-                "index": 391,
-                "size": 1
+                "en": "This parameter (34) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (34) bepaalt de snelheid van het knipperen van de LED."
               },
               "attr": {
                 "min": 1,
@@ -1422,12 +1455,8 @@
                 "nl": "Geluid nummer"
               },
               "hint": {
-                "en": "This parameter (392) determines the sound played when the alarm goes off.",
-                "nl": "Deze parameter (392) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
-              },
-              "zwave": {
-                "index": 392,
-                "size": 1
+                "en": "This parameter (34) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (34) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
               },
               "attr": {
                 "min": 1
@@ -1442,12 +1471,8 @@
                 "nl": "Volume"
               },
               "hint": {
-                "en": "This parameter (393) determines the volume of the alarm.",
-                "nl": "Deze parameter (393) bepaalt het volume van het alarm."
-              },
-              "zwave": {
-                "index": 393,
-                "size": 1
+                "en": "This parameter (34) determines the volume of the alarm.",
+                "nl": "Deze parameter (34) bepaalt het volume van het alarm."
               },
               "attr": {
                 "min": 1,
@@ -1463,12 +1488,8 @@
                 "nl": "Alarm aan"
               },
               "hint": {
-                "en": "This parameter (394) determines whether or not the alarm is enabled.",
-                "nl": "Deze parameter (394) bepaalt of het alarm aan staat."
-              },
-              "zwave": {
-                "index": 394,
-                "size": 1
+                "en": "This parameter (34) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (34) bepaalt of het alarm aan staat."
               },
               "value": false
             }
@@ -1489,12 +1510,8 @@
                 "nl": "LED knipper snelheid"
               },
               "hint": {
-                "en": "This parameter (391) determines the blinking frequency of the LED light.",
-                "nl": "Deze parameter (391) bepaalt de snelheid van het knipperen van de LED."
-              },
-              "zwave": {
-                "index": 391,
-                "size": 1
+                "en": "This parameter (34) determines the blinking frequency of the LED light.",
+                "nl": "Deze parameter (34) bepaalt de snelheid van het knipperen van de LED."
               },
               "attr": {
                 "min": 1,
@@ -1510,12 +1527,8 @@
                 "nl": "Geluid nummer"
               },
               "hint": {
-                "en": "This parameter (402) determines the sound played when the alarm goes off.",
-                "nl": "Deze parameter (402) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
-              },
-              "zwave": {
-                "index": 402,
-                "size": 1
+                "en": "This parameter (34) determines the sound played when the alarm goes off.",
+                "nl": "Deze parameter (34) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
               },
               "attr": {
                 "min": 1
@@ -1530,12 +1543,8 @@
                 "nl": "Volume"
               },
               "hint": {
-                "en": "This parameter (403) determines the volume of the alarm.",
-                "nl": "Deze parameter (403) bepaalt het volume van het alarm."
-              },
-              "zwave": {
-                "index": 403,
-                "size": 1
+                "en": "This parameter (34) determines the volume of the alarm.",
+                "nl": "Deze parameter (34) bepaalt het volume van het alarm."
               },
               "attr": {
                 "min": 1,
@@ -1551,12 +1560,8 @@
                 "nl": "Alarm aan"
               },
               "hint": {
-                "en": "This parameter (404) determines whether or not the alarm is enabled.",
-                "nl": "Deze parameter (404) bepaalt of het alarm aan staat."
-              },
-              "zwave": {
-                "index": 404,
-                "size": 1
+                "en": "This parameter (34) determines whether or not the alarm is enabled.",
+                "nl": "Deze parameter (34) bepaalt of het alarm aan staat."
               },
               "value": false
             }
@@ -2694,6 +2699,22 @@
       "capabilities": [
         "onoff"
       ],
+      "mobile": {
+        "components": [
+          {
+            "capabilities": [
+              "onoff"
+            ],
+            "id": "icon"
+          },
+          {
+            "capabilities": [
+              "onoff"
+            ],
+            "id": "toggle"
+          }
+        ]
+      },
       "images": {
         "large": "/drivers/ZW080/assets/images/large.jpg",
         "small": "/drivers/ZW080/assets/images/small.jpg"
@@ -2895,8 +2916,8 @@
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Short press the \"Exclude\" button on the Key Fob",
-            "nl": "Druk kort op de \"Exclude\" knop op de Key Fob"
+            "en": "Return the device into Setup mode by pressing the \"Mode\" and \"Learn\" buttons simultaneously for 3 seconds, then short press the \"Learn\" button on the Key Fob",
+            "nl": "Switch het apparaat naar de Setup modus door de \"Mode\" en \"Learn\" knoppen tegelijk in te drukken voor 3 seconden, druk daarna kort op de \"Learn\" knop op de Key Fob"
           }
         },
         "associationGroups": [
@@ -4486,9 +4507,7 @@
           2,
           514
         ],
-        "productId": [
-          100
-        ],
+        "productId": 100,
         "zwaveAllianceProductId": 2714,
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2714/Aeon Labs MultiSensor 6 manual.pdf",
         "learnmode": {
@@ -4958,7 +4977,7 @@
         "defaultConfiguration": [
           {
             "id": 80,
-            "value": 3,
+            "value": 2,
             "size": 1
           },
           {
@@ -5894,6 +5913,13 @@
         "associationGroups": [
           1,
           2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          }
         ]
       },
       "settings": [
@@ -6080,7 +6106,7 @@
             "index": 80,
             "size": 1
           },
-          "value": "3",
+          "value": "2",
           "values": [
             {
               "id": "0",
@@ -7094,7 +7120,7 @@
         "defaultConfiguration": [
           {
             "id": 80,
-            "value": 3,
+            "value": 2,
             "size": 1
           },
           {
@@ -7116,6 +7142,8 @@
             "icon": "/drivers/ZW132/assets/icon.svg",
             "class": "light",
             "capabilities": [
+              "measure_power",
+              "meter_power",
               "onoff"
             ]
           },
@@ -7126,6 +7154,8 @@
             "icon": "/drivers/ZW132/assets/icon.svg",
             "class": "light",
             "capabilities": [
+              "measure_power",
+              "meter_power",
               "onoff"
             ]
           }
@@ -7591,6 +7621,286 @@
               "label": {
                 "en": "2-state switch mode",
                 "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW140",
+      "name": {
+        "en": "Dual Nano Switch (ZW140)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW140/assets/images/large.png",
+        "small": "/drivers/ZW140/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3,
+          515
+        ],
+        "productId": [
+          132
+        ],
+        "zwaveAllianceProductId": 2286,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the back of the Dual Nano Switch (ZW140).",
+            "nl": "Druk op de actie knop op de achterkant van de Dual Nano Switch (ZW140)."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          }
+        ],
+        "multiChannelNodes": {
+          "1": {
+            "name": {
+              "en": "Dual Nano Switch 1"
+            },
+            "icon": "/drivers/ZW140/assets/icon.svg",
+            "class": "light",
+            "capabilities": [
+              "measure_power",
+              "meter_power",
+              "onoff"
+            ]
+          },
+          "2": {
+            "name": {
+              "en": "Dual Nano Switch 2"
+            },
+            "icon": "/drivers/ZW140/assets/icon.svg",
+            "class": "light",
+            "capabilities": [
+              "measure_power",
+              "meter_power",
+              "onoff"
+            ]
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines what type of input is connected to input 1.",
+            "nl": "Deze parameter (120) bepaalt welk type input apparaat er is verbonden op input 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 2",
+            "nl": "Schakelaar type input 2"
+          },
+          "hint": {
+            "en": "This parameter (121) determines what type of input is connected to input 2.",
+            "nl": "Deze parameter (121) bepaalt welk type input apparaat er is verbonden op input 2."
+          },
+          "zwave": {
+            "index": 121,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": "20",
+          "type": "dropdown",
+          "label": {
+            "en": "Configure the output load status after re-power",
+            "nl": "Zet na een stroomonderbreking deze status"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the behaviour after power was disconnected.",
+            "nl": "Deze parameter (20) bepaalt het gedrag nadat de stroomtoevoer is verbroken."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Status before re-power",
+                "nl": "Status voor stroomonderbreking"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": "81",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 3",
+            "nl": "Metingen naar associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (81) determines what reports are sent to association group 3.",
+            "nl": "Deze parameter (81) bepaalt welke raporten er worden verzonden naar associatie groep 3."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
+              }
+            }
+          ]
+        },
+        {
+          "id": "82",
+          "type": "dropdown",
+          "label": {
+            "en": "Reports to association group 4",
+            "nl": "Metingen naar associatie groep 4"
+          },
+          "hint": {
+            "en": "This parameter (82) determines what reports are sent to association group 4.",
+            "nl": "Deze parameter (82) bepaalt welke raporten er worden verzonden naar associatie groep 4."
+          },
+          "zwave": {
+            "index": 82,
+            "size": 1
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Niets"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Set",
+                "nl": "Basic Set"
               }
             }
           ]

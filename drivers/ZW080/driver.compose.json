@@ -8,6 +8,22 @@
   "capabilities": [
     "onoff"
   ],
+  "mobile": {
+    "components": [
+      {
+        "capabilities": [
+          "onoff"
+        ],
+        "id": "icon"
+      },
+      {
+        "capabilities": [
+          "onoff"
+        ],
+        "id": "toggle"
+      }
+    ]
+  },
   "images": {
     "large": "{{driverAssetsPath}}/images/large.jpg",
     "small": "{{driverAssetsPath}}/images/small.jpg"

@@ -64,10 +64,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
         },
-        "zwave": {
-          "index": 371,
-          "size": 4
-        },
         "attr": {
           "min": 1,
           "max": 10
@@ -85,10 +81,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
         },
-        "zwave": {
-          "index": 372,
-          "size": 4
-        },
         "attr": {
           "min": 1
         },
@@ -104,10 +96,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
-        },
-        "zwave": {
-          "index": 373,
-          "size": 4
         },
         "attr": {
           "min": 1,
@@ -125,10 +113,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
-        },
-        "zwave": {
-          "index": 374,
-          "size": 4
         },
         "value": true
       }
@@ -152,10 +136,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
         },
-        "zwave": {
-          "index": 381,
-          "size": 1
-        },
         "attr": {
           "min": 1,
           "max": 10
@@ -173,10 +153,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
         },
-        "zwave": {
-          "index": 382,
-          "size": 1
-        },
         "attr": {
           "min": 1
         },
@@ -192,10 +168,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
-        },
-        "zwave": {
-          "index": 383,
-          "size": 1
         },
         "attr": {
           "min": 1,
@@ -213,10 +185,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
-        },
-        "zwave": {
-          "index": 384,
-          "size": 1
         },
         "value": true
       }
@@ -240,10 +208,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
         },
-        "zwave": {
-          "index": 391,
-          "size": 1
-        },
         "attr": {
           "min": 1,
           "max": 10
@@ -261,10 +225,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
         },
-        "zwave": {
-          "index": 392,
-          "size": 1
-        },
         "attr": {
           "min": 1
         },
@@ -280,10 +240,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
-        },
-        "zwave": {
-          "index": 393,
-          "size": 1
         },
         "attr": {
           "min": 1,
@@ -301,10 +257,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
-        },
-        "zwave": {
-          "index": 394,
-          "size": 1
         },
         "value": false
       }
@@ -328,10 +280,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
         },
-        "zwave": {
-          "index": 391,
-          "size": 1
-        },
         "attr": {
           "min": 1,
           "max": 10
@@ -349,10 +297,6 @@
           "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
         },
-        "zwave": {
-          "index": 402,
-          "size": 1
-        },
         "attr": {
           "min": 1
         },
@@ -368,10 +312,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
-        },
-        "zwave": {
-          "index": 403,
-          "size": 1
         },
         "attr": {
           "min": 1,
@@ -389,10 +329,6 @@
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
           "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
-        },
-        "zwave": {
-          "index": 404,
-          "size": 1
         },
         "value": false
       }

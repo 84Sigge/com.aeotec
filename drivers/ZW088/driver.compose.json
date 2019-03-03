@@ -33,8 +33,8 @@
     },
     "unlearnmode": {
       "instruction": {
-        "en": "Short press the \"Exclude\" button on the {{driverNameEn}}",
-        "nl": "Druk kort op de \"Exclude\" knop op de {{driverNameNl}}"
+        "en": "Return the device into Setup mode by pressing the \"Mode\" and \"Learn\" buttons simultaneously for 3 seconds, then short press the \"Learn\" button on the {{driverNameEn}}",
+        "nl": "Switch het apparaat naar de Setup modus door de \"Mode\" en \"Learn\" knoppen tegelijk in te drukken voor 3 seconden, druk daarna kort op de \"Learn\" knop op de {{driverNameNl}}"
       }
     },
     "associationGroups": [

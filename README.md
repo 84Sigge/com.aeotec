@@ -3,6 +3,37 @@
 This app adds support for Aeotec devices in Homey.
 
 ### Changelog:
+**2.0.24 - 2.0.26**
+* Fixes motion alarm on the DSB05 Multisensor 4-in-1
+
+**2.0.23**
+* Fixes device icons not showing
+
+**2.0.22**
+* Fixes for Garage Door Controller Gen5
+
+**2.0.21**
+* Fixes Door/Window Sensor Gen5
+* Meshdriver update
+
+**2.0.20**
+* Added Nano Switch ZW140
+
+**2.0.18**
+* Fixes for the RGB bulb, re-added the rainbow mode Flow as well
+
+**2.0.17**
+* Dual switches should now update their state in Homey when triggered by hand
+
+**2.0.16**
+* Fixed Flows for the Wallmote Quad
+* Fixed on/off status for the Heavy Duty Switch
+
+**2.0.15**
+* Fixed an issue with App store compatibility
+
+**2.0.1 - 2.0.14**
+* Bug fixes
 
 **2.0.0**
 * WARNING: Preview release, this might be unstable

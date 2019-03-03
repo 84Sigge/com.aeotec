@@ -4,41 +4,28 @@ const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class AeotecSirenDevice extends ZwaveDevice {
-	
-	onMeshInit() {
-		this._alarmOnFlow = new Homey.FlowCardAction('ZW080-turn_alarm_on')
-			.register()
-            .registerRunListener( async (args, state) => {
-                return await this._onOffRunListener(args, state, true);
-            });
-		this._alarmOffFlow = new Homey.FlowCardAction('ZW080-turn_alarm_off')
-			.register()
-			.registerRunListener( async (args, state) => {
-				return await this._onOffRunListener(args, state, false);
-			});
 
-        this._changeSoundFlow = new Homey.FlowCardAction('ZW080-set_alarm')
-            .register()
-            .registerRunListener( async (args, state) => {
-            	return await this._changeSoundRunListener(args, state);
-			});
+	onMeshInit() {
+		this._alarmOnFlow = this.getDriver().alarmOnFlow;
+		this._alarmOffFlow = this.getDriver().alarmOffFlow;
+
+        this._changeSoundFlow = this.getDriver().changeSoundFlow;
 
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 	}
 
-	async _onOffRunListener(args, state, on) {
+	async onOffRunListener(args, state, on) {
 		let value;
 		on ? value = 255 : value = 0;
 
-		if (this.node && this.node.CommandClass.COMMAND_CLASS_SWITCH_BINARY &&
-			args && args.device && args.device === this) {
+		if (this.node && this.node.CommandClass.COMMAND_CLASS_SWITCH_BINARY) {
 				return await this.node.CommandClass.COMMAND_CLASS_SWITCH_BINARY.SWITCH_BINARY_SET({
 					'Switch Value': value,
 				});
 		} else return Promise.reject('invalid_device_command_class');
 	}
 
-	async _changeSoundRunListener(args, state) {
+	async changeSoundRunListener(args, state) {
 		let settingsValue, zwaveValue;
 
 		if (args && args.sound && args.volume) {

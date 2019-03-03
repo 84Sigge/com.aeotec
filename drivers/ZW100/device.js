@@ -3,7 +3,7 @@
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
 class AeotecMultiSensorSixDevice extends ZwaveDevice {
-	
+
 	onMeshInit() {
 		this._cancellationTimeout = this.getSetting('tamper_cancellation');
 
@@ -46,14 +46,12 @@ class AeotecMultiSensorSixDevice extends ZwaveDevice {
 	}
 
 	onSettings(oldSettings, newSettings, changedKeys) {
-        super.onSettings(oldSettings, newSettings, changedKeys);
-
         if (changedKeys.includes('tamper_cancellation')) {
 			this._cancellationTimeout =  this.getSetting('tamper_cancellation');
 		}
 
-		return Promise.resolve();
-	}
+		return super.onSettings(oldSettings, newSettings, changedKeys);
+    }
 }
 
 module.exports = AeotecMultiSensorSixDevice;
