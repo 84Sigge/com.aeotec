@@ -3,6 +3,12 @@
 This app adds support for Aeotec devices in Homey.
 
 ### Changelog:
+**2.0.27**
+* Added Micro Switch G2
+* Added Micro Dimmer G2
+* Added Micro Smart Switch G2
+* Added Micro Smart Dimmer G2
+
 **2.0.24 - 2.0.26**
 * Fixes motion alarm on the DSB05 Multisensor 4-in-1
 
