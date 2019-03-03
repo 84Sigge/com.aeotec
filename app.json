@@ -39,6 +39,10 @@
       {
         "name": "Jonas Lundblad",
         "email": "jolnyx@gmail.com"
+      },
+      {
+        "name": "Johan Bendz",
+        "email": "johan_bendz@hotmail.com"
       }
     ]
   },
@@ -679,6 +683,707 @@
     ]
   },
   "drivers": [
+      {
+      "id": "DSC-26103ZWEU",
+      "name": {
+        "en": "Micro Switch Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/DSC-26103ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC-26103ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          26
+        ],
+        "zwaveAllianceProductId": 768,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/768",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Switch.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Switch."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 102,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSC-27103ZWEU",
+      "name": {
+        "en": "Micro Dimmer Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "images": {
+        "large": "/drivers/DSC-27103ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC-27103ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          27
+        ],
+        "zwaveAllianceProductId": 765,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/765",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Dimmer.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 5
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 102,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 3
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSC18103-ZWEU",
+      "name": {
+        "en": "Micro Smart Switch Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "measure_power",
+        "meter_power"
+      ],
+      "images": {
+        "large": "/drivers/DSC18103-ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC18103-ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          18
+        ],
+        "zwaveAllianceProductId": 767,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/767",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Switch.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Switch."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change needed before an update report is send",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
+            "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32000
+          },
+          "value": 25
+        },
+        {
+          "id": "92",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change (%) needed before an update report is send",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
+            "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
+          },
+          "zwave": {
+            "index": 92,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 30
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSC19103-ZWEU",
+      "name": {
+        "en": "Micro Smart Dimmer Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "measure_power",
+        "meter_power"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "images": {
+        "large": "/drivers/DSC19103-ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC19103-ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          19
+        ],
+        "zwaveAllianceProductId": 766,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/766",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Dimmer.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change needed before an update report is send",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
+            "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32000
+          },
+          "value": 25
+        },
+        {
+          "id": "92",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change (%) needed before an update report is send",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
+            "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
+          },
+          "zwave": {
+            "index": 92,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 30
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "DSA38",
       "name": {
