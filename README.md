@@ -3,6 +3,9 @@
 This app adds support for Aeotec devices in Homey.
 
 ### Changelog:
+**2.0.27**
+* Added Smart Switch DSC06106-ZWEU
+
 **2.0.24 - 2.0.26**
 * Fixes motion alarm on the DSB05 Multisensor 4-in-1
 
