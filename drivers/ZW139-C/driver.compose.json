@@ -3,7 +3,7 @@
   "name": {
     "en": "Nano Switch (ZW139)"
   },
-  "class": "light",
+  "class": "socket",
   "capabilities": [
     "onoff"
   ],

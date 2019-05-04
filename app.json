@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.27",
+  "version": "2.0.30",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "brandColor": "#00A2DA",
@@ -7761,7 +7761,7 @@
       "name": {
         "en": "Nano Switch (ZW139)"
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "onoff"
       ],
@@ -8024,7 +8024,7 @@
       "name": {
         "en": "Dual Nano Switch (ZW140)"
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "onoff"
       ],
@@ -8077,8 +8077,6 @@
             "icon": "/drivers/ZW140/assets/icon.svg",
             "class": "light",
             "capabilities": [
-              "measure_power",
-              "meter_power",
               "onoff"
             ]
           },
@@ -8089,8 +8087,6 @@
             "icon": "/drivers/ZW140/assets/icon.svg",
             "class": "light",
             "capabilities": [
-              "measure_power",
-              "meter_power",
               "onoff"
             ]
           }
