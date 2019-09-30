@@ -39,6 +39,10 @@
       {
         "name": "Jonas Lundblad",
         "email": "jolnyx@gmail.com"
+      },
+      {
+        "name": "Johan Bendz",
+        "email": "johan_bendz@hotmail.com"
       }
     ]
   },
@@ -679,6 +683,42 @@
     ]
   },
   "drivers": [
+    {
+      "id": "ZW162-C",
+      "name": {
+        "en": "Doorbell 6"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/ZW162-C/assets/images/large.png",
+        "small": "/drivers/ZW162-C/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          162
+        ],
+        "zwaveAllianceProductId": 3292,
+        "learnmode": {
+          "instruction": {
+            "en": "Press the \"Learn\" button on the Doorbell 6.",
+            "nl": "Druk de \"Learn\" knop op de Doorbell 6 in."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+          }
+        ]
+    },
     {
       "id": "DSA38",
       "name": {
