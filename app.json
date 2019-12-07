@@ -773,6 +773,939 @@
     ]
   },
   "drivers": [
+        {
+        "id": "ZWA005",
+        "name": {
+            "en": "TriSensor"
+        },
+        "class": "sensor",
+        "capabilities": [
+            "measure_battery",
+            "alarm_motion",
+            "measure_temperature",
+            "measure_luminance"
+        ],
+        "images": {
+            "large": "/drivers/ZWA005/assets/images/large.png",
+            "small": "/drivers/ZWA005/assets/images/small.png"
+        },
+        "zwave": {
+            "manufacturerId": 881,
+            "productTypeId": 2,
+            "productId": 5,
+            "zwaveAllianceProductId": 2898,
+            "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2898/TriSensor%20user%20manual%2020180416.pdf",
+            "learnmode": {
+            "image": "/drivers/ZWA005/assets/learnmode.svg",
+            "instruction": {
+                "en": "To include or remove: press the Action Button on the TriSensor",
+                "nl": "Om op te nemen: druk op de actieknop op TriSensor."
+            }
+            },
+            "associationGroups": [
+            1
+            ],
+            "associationGroupsOptions": {
+            "1": {
+                "hint": {
+                "en": "This is the lifeline, it is not recommended to remove Homey's id from this association group.",
+                "nl": "Dit is de levenslijn, het is niet aangeraden om Homey's zijn id te verwijderen uit deze associatie groep."
+                }
+            }
+            },
+            "defaultConfiguration": [
+            {
+                "id": 4,
+                "value": 1,
+                "size": 1
+            }
+            ]
+        },
+        "settings": [
+            {
+            "id": "1",
+            "type": "number",
+            "label": {
+                "en": "Motion Retrigger Time",
+                "nl": "Bewegingsrempeltijd"
+            },
+            "hint": {
+                "en": "This parameter configures the delay time before the motion sensor can be triggered again.\nValue = 0 will disable motion sensor from triggering until motion timeout has finished (unit: seconds).",
+                "nl": "Deze parameter configureert de vertragingstijd voordat de bewegingssensor opnieuw kan worden geactiveerd.\nWaarde = 0 schakelt de bewegingssensor uit tot de beweging timeout is voltooid (eenheden: seconden)."
+            },
+            "zwave": {
+                "index": 1,
+                "size": 2
+            },
+            "attr": {
+                "min": 0,
+                "max": 32767
+            },
+            "value": 30
+            },
+            {
+            "id": "2",
+            "type": "number",
+            "label": {
+                "en": "Motion Timeout",
+                "nl": "Motion Time-out"
+            },
+            "hint": {
+                "en": "This parameter configures the time to clear a motion event in seconds",
+                "nl": "Deze parameter configureert de tijd om een bewegingsgebeurtenis in seconden te wissen"
+            },
+            "zwave": {
+                "index": 2,
+                "size": 2
+            },
+            "attr": {
+                "min": 1,
+                "max": 32767
+            },
+            "value": 240
+            },
+            {
+            "id": "3",
+            "type": "dropdown",
+            "label": {
+                "en": "Motion Sensitivity",
+                "nl": "Bewegingsgevoeligheid"
+            },
+            "hint": {
+                "en": "Value = 0 will disable the PIR/motion sensor",
+                "nl": "Waarde = 0 schakelt de PIR/bewegingssensor uit"
+            },
+            "zwave": {
+                "index": 3,
+                "size": 1
+            },
+            "value": "11",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Off",
+                    "nl": "Uit"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Level 1 (minimum)",
+                    "nl": "Level 1 (minimum)"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Level 2",
+                    "nl": "Level 2"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Level 3",
+                    "nl": "Level 3"
+                }
+                },
+                {
+                "id": "4",
+                "label": {
+                    "en": "Level 4",
+                    "nl": "Level 4"
+                }
+                },
+                {
+                "id": "5",
+                "label": {
+                    "en": "Level 5",
+                    "nl": "Level 5"
+                }
+                },
+                {
+                "id": "6",
+                "label": {
+                    "en": "Level 6",
+                    "nl": "Level 6"
+                }
+                },
+                {
+                "id": "7",
+                "label": {
+                    "en": "Level 7",
+                    "nl": "Level 7"
+                }
+                },
+                {
+                "id": "8",
+                "label": {
+                    "en": "Level 8",
+                    "nl": "Level 8"
+                }
+                },
+                {
+                "id": "9",
+                "label": {
+                    "en": "Level 9",
+                    "nl": "Level 9"
+                }
+                },
+                {
+                "id": "10",
+                "label": {
+                    "en": "Level 10",
+                    "nl": "Level 10"
+                }
+                },
+                {
+                "id": "11",
+                "label": {
+                    "en": "Level 11 (maximum)",
+                    "nl": "Level 11 (maximum)"
+                }
+                }
+            ]
+            },
+            {
+            "id": "4",
+            "type": "checkbox",
+            "label": {
+                "en": "Binary Sensor Report Enable",
+                "nl": "Binaire sensorrapport inschakelen"
+            },
+            "hint": {
+                "en": "Disables/Enables binary report when motion event is detected or cleared",
+                "nl": "Schakelt binair rapport in/uit wanneer bewegingsgebeurtenis wordt gedetecteerd of gewist"
+            },
+            "zwave": {
+                "index": 4,
+                "size": 1
+            },
+            "value": true
+            },
+            {
+            "id": "5",
+            "type": "dropdown",
+            "label": {
+                "en": "BASIC_SET to associated nodes.",
+                "nl": "BASIC_SET naar geassocieerde knooppunten"
+            },
+            "hint": {
+                "en": "This parameter configures send BASIC_SET command to nodes that are associated in group 2 and group 3.",
+                "nl": "Deze parameter wordt de opdracht BASIC_SET verzenden geconfigureerd naar knooppunten die zijn gekoppeld aan groep 2 en groep 3."
+            },
+            "zwave": {
+                "index": 5,
+                "size": 1
+            },
+            "value": "3",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Disable All Group Basic Set Command",
+                    "nl": "Alle groepsbasissetopdracht uitgeschakeld"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Enable Group 2 Basic Set Command, Group 3 Basic Set Command is disabled",
+                    "nl": "Ingeschakeld groep 2 basisset commando, groep 3 basisset commando is uitgeschakeld"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Enable Group 3 Basic Set Command, Group 2 Basic Set Command is disabled",
+                    "nl": "Ingeschakeld groep 3 basisset commando, groep 2 basisset commando is uitgeschakeld"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Enable Group 2 and Group 3 Basic Set Command",
+                    "nl": "Ingeschakeld commando voor groep 2 en groep 3 basisset"
+                }
+                }
+            ]
+            },
+            {
+            "id": "6",
+            "type": "dropdown",
+            "label": {
+                "en": "BASIC_SET Value Settings for Group 2",
+                "nl": "BASIC_SET waarde-instellingen voor Groep 2"
+            },
+            "hint": {
+                "en": "This parameter configures send BASIC_SET command to nodes that are associated in group 2 and group 3.",
+                "nl": "Deze parameter wordt de opdracht BASIC_SET verzenden geconfigureerd naar knooppunten die zijn gekoppeld aan groep 2 en groep 3."
+            },
+            "zwave": {
+                "index": 6,
+                "size": 1
+            },
+            "value": "0",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Send BASIC_SET = 0xFF when motion event is triggered. Send BASIC_SET = 0x00 when motion event is cleared",
+                    "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis wordt geactiveerd. Stuur BASIC_SET = 0x00 als de bewegingsgebeurtenis is gewist"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Send BASIC_SET = 0x00 when motion event is triggered. Send BASIC_SET = 0xFF when motion event is cleared",
+                    "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis wordt geactiveerd. Stuur BASIC_SET = 0xFF als de bewegingsgebeurtenis is gewist"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Send BASIC_SET = 0xFF when motion event is triggered",
+                    "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis wordt geactiveerd"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Send BASIC_SET = 0x00 when motion event is triggered",
+                    "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis wordt geactiveerd"
+                }
+                },
+                {
+                "id": "4",
+                "label": {
+                    "en": "Send BASIC_SET = 0x00 when motion event is cleared",
+                    "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis is gewist"
+                }
+                },
+                {
+                "id": "5",
+                "label": {
+                    "en": "Send BASIC_SET = 0xFF when motion event is cleared",
+                    "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis is gewist"
+                }
+                }
+            ]
+            },
+            {
+            "id": "7",
+            "type": "number",
+            "label": {
+                "en": "Temperature Alarm Value",
+                "nl": "Temperatuur alarm waarde"
+            },
+            "hint": {
+                "en": "This parameter configures the threshold value for the temperature alarm. Range Celsius: -400-850. Range Fahrenheit: -400-1185",
+                "nl": "Deze parameter configureert de drempelwaarde voor het temperatuuralarm. Bereik Celsius: -400-850. Range Fahrenheit: -400-1185"
+            },
+            "zwave": {
+                "index": 7,
+                "size": 2
+            },
+            "attr": {
+                "min": -400,
+                "max": 1185
+            },
+            "value": 239
+            },
+            {
+            "id": "10",
+            "type": "checkbox",
+            "label": {
+                "en": "Disable LED",
+                "nl": "uitschakelen LED"
+            },
+            "hint": {
+                "en": "Disables LED light activation when motion is detected",
+                "nl": "Uitgeschakelde LED-lichtactivering wanneer beweging wordt gedetecteerd"
+            },
+            "zwave": {
+                "index": 10,
+                "size": 1
+            },
+            "value": false
+            },
+            {
+            "id": "11",
+            "type": "dropdown",
+            "label": {
+                "en": "LED Color For Motion Event Report",
+                "nl": "LED-kleur voor bewegingsgebeurtenisrapport"
+            },
+            "hint": {
+                "en": "This parameter defines the colour of the LED light when motion is detected",
+                "nl": "Deze parameter bepaalt de kleur van het LED-lampje wanneer beweging wordt gedetecteerd"
+            },
+            "zwave": {
+                "index": 11,
+                "size": 1
+            },
+            "value": "2",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Disable",
+                    "nl": "Onbruikbaar maken"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Red",
+                    "nl": "Rood"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Green",
+                    "nl": "Groen"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Blue",
+                    "nl": "Blauw"
+                }
+                },
+                {
+                "id": "4",
+                "label": {
+                    "en": "Yellow",
+                    "nl": "Geel"
+                }
+                },
+                {
+                "id": "5",
+                "label": {
+                    "en": "Pink",
+                    "nl": "Roze"
+                }
+                },
+                {
+                "id": "6",
+                "label": {
+                    "en": "Cyan",
+                    "nl": "Cyaan"
+                }
+                },
+                {
+                "id": "7",
+                "label": {
+                    "en": "Purple",
+                    "nl": "Purper"
+                }
+                },
+                {
+                "id": "8",
+                "label": {
+                    "en": "Orange",
+                    "nl": "Oranje"
+                }
+                }
+            ]
+           },
+           {
+            "id": "12",
+            "type": "dropdown",
+            "label": {
+                "en": "LED Color For Temperature Sensor Report",
+                "nl": "LED-kleur voor temperatuursensorrapport"
+            },
+            "hint": {
+                "en": "This parameter defines the colour of the LED light for the temperature sensor",
+                "nl": "Deze parameter definieert de kleur van het LED-licht voor de temperatuursensor"
+            },
+            "zwave": {
+                "index": 12,
+                "size": 1
+            },
+            "value": "0",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Disable",
+                    "nl": "Onbruikbaar maken"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Red",
+                    "nl": "Rood"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Green",
+                    "nl": "Groen"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Blue",
+                    "nl": "Blauw"
+                }
+                },
+                {
+                "id": "4",
+                "label": {
+                    "en": "Yellow",
+                    "nl": "Geel"
+                }
+                },
+                {
+                "id": "5",
+                "label": {
+                    "en": "Pink",
+                    "nl": "Roze"
+                }
+                },
+                {
+                "id": "6",
+                "label": {
+                    "en": "Cyan",
+                    "nl": "Cyaan"
+                }
+                },
+                {
+                "id": "7",
+                "label": {
+                    "en": "Purple",
+                    "nl": "Purper"
+                }
+                },
+                {
+                "id": "8",
+                "label": {
+                    "en": "Orange",
+                    "nl": "Oranje"
+                }
+                }
+            ]
+           },
+           {
+            "id": "13",
+            "type": "dropdown",
+            "label": {
+                "en": "LED Color For Light Sensor Report",
+                "nl": "LED-kleur voor lichtsensorrapport"
+            },
+            "hint": {
+                "en": "This parameter defines the colour of the LED light for the light level",
+                "nl": "Deze parameter definieert de kleur van het LED-licht voor het lichtniveau"
+            },
+            "zwave": {
+                "index": 13,
+                "size": 1
+            },
+            "value": "0",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Disable",
+                    "nl": "Onbruikbaar maken"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Red",
+                    "nl": "Rood"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Green",
+                    "nl": "Groen"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Blue",
+                    "nl": "Blauw"
+                }
+                },
+                {
+                "id": "4",
+                "label": {
+                    "en": "Yellow",
+                    "nl": "Geel"
+                }
+                },
+                {
+                "id": "5",
+                "label": {
+                    "en": "Pink",
+                    "nl": "Roze"
+                }
+                },
+                {
+                "id": "6",
+                "label": {
+                    "en": "Cyan",
+                    "nl": "Cyaan"
+                }
+                },
+                {
+                "id": "7",
+                "label": {
+                    "en": "Purple",
+                    "nl": "Purper"
+                }
+                },
+                {
+                "id": "8",
+                "label": {
+                    "en": "Orange",
+                    "nl": "Oranje"
+                }
+                }
+            ]
+           },
+           {
+            "id": "14",
+            "type": "dropdown",
+            "label": {
+                "en": "LED Color For Battery Report",
+                "nl": "LED-kleur voor batterijrapport"
+            },
+            "hint": {
+                "en": "This parameter defines the colour of the LED light for the battery level",
+                "nl": "Deze parameter bepaalt de kleur van het LED-lampje voor het batterijniveau"
+            },
+            "zwave": {
+                "index": 14,
+                "size": 1
+            },
+            "value": "0",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Disable",
+                    "nl": "Onbruikbaar maken"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Red",
+                    "nl": "Rood"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Green",
+                    "nl": "Groen"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Blue",
+                    "nl": "Blauw"
+                }
+                },
+                {
+                "id": "4",
+                "label": {
+                    "en": "Yellow",
+                    "nl": "Geel"
+                }
+                },
+                {
+                "id": "5",
+                "label": {
+                    "en": "Pink",
+                    "nl": "Roze"
+                }
+                },
+                {
+                "id": "6",
+                "label": {
+                    "en": "Cyan",
+                    "nl": "Cyaan"
+                }
+                },
+                {
+                "id": "7",
+                "label": {
+                    "en": "Purple",
+                    "nl": "Purper"
+                }
+                },
+                {
+                "id": "8",
+                "label": {
+                    "en": "Orange",
+                    "nl": "Oranje"
+                }
+                }
+            ]
+           },
+           {
+            "id": "15",
+            "type": "dropdown",
+            "label": {
+                "en": "LED Color For Wakeup Notification Report",
+                "nl": "LED-kleur voor activeringsrapport"
+            },
+            "hint": {
+                "en": "This parameter defines the colour of the LED light for the wakeup notification",
+                "nl": "Deze parameter bepaalt de kleur van het LED-lampje voor de activeringsmelding"
+            },
+            "zwave": {
+                "index": 15,
+                "size": 1
+            },
+            "value": "0",
+            "values": [
+                {
+                "id": "0",
+                "label": {
+                    "en": "Disable",
+                    "nl": "Onbruikbaar maken"
+                }
+                },
+                {
+                "id": "1",
+                "label": {
+                    "en": "Red",
+                    "nl": "Rood"
+                }
+                },
+                {
+                "id": "2",
+                "label": {
+                    "en": "Green",
+                    "nl": "Groen"
+                }
+                },
+                {
+                "id": "3",
+                "label": {
+                    "en": "Blue",
+                    "nl": "Blauw"
+                }
+                },
+                {
+                "id": "4",
+                "label": {
+                    "en": "Yellow",
+                    "nl": "Geel"
+                }
+                },
+                {
+                "id": "5",
+                "label": {
+                    "en": "Pink",
+                    "nl": "Roze"
+                }
+                },
+                {
+                "id": "6",
+                "label": {
+                    "en": "Cyan",
+                    "nl": "Cyaan"
+                }
+                },
+                {
+                "id": "7",
+                "label": {
+                    "en": "Purple",
+                    "nl": "Purper"
+                }
+                },
+                {
+                 "id": "8",
+                 "label": {
+                    "en": "Orange",
+                    "nl": "Oranje"
+                 }
+                }
+            ]
+           },
+           {
+            "id": "20",
+            "type": "checkbox",
+            "label": {
+                "en": "Temperature Scale Setting",
+                "nl": "Temperatuurschaal instelling"
+            },
+            "hint": {
+                "en": "Configures temperature sensor scale type. Disabled = Celcius. Enabled = Fahrenheit",
+                "nl": "Configureert het schaaltype van de temperatuursensor. Uitgeschakeld = Celcius. Ingeschakeld = Fahrenheit"
+            },
+            "zwave": {
+                "index": 20,
+                "size": 1
+            },
+            "value": false
+           },
+           {
+            "id": "21",
+            "type": "number",
+            "label": {
+                "en": "Temperature Threshold Value to Report",
+                "nl": "Temperatuurdrempelwaarde om te rapporteren"
+            },
+            "hint": {
+                "en": "Change threshold value for change in temperature to induce an automatic report for temperature sensor (unit: Celsius/Fahrenheit).",
+                "nl": "Wijzig de drempelwaarde voor temperatuurverandering om een automatisch rapport voor temperatuursensor te genereren (eenheden: Celsius/Fahrenheit)."
+            },
+            "zwave": {
+                "index": 21,
+                "size": 2
+            },
+            "attr": {
+                "min": 0,
+                "max": 250
+            },
+            "value": 20
+           },
+           {
+            "id": "22",
+            "type": "number",
+            "label": {
+                "en": "Light Intensity Threshold Value to Report",
+                "nl": "Lichtintensiteit Drempelwaarde om te rapporteren"
+            },
+            "hint": {
+                "en": "Change threshold value for change in temperature to induce an automatic report for temperature sensor (unit: Lux).",
+                "nl": "Wijzig de drempelwaarde voor temperatuurverandering om een automatisch rapport voor temperatuursensor te genereren (eenheden: Lux)."
+            },
+            "zwave": {
+                "index": 22,
+                "size": 2
+            },
+            "attr": {
+                "min": 0,
+                "max": 10000
+            },
+            "value": 100
+           },
+           {
+            "id": "23",
+            "type": "number",
+            "label": {
+                "en": "Temperature Sensor Report Interval",
+                "nl": "Interval temperatuursensorrapport"
+            },
+            "hint": {
+                "en": "This parameter is configures the time interval for temperature sensor reporting. Larger values will improve the battery life of the unit (unit: seconds).",
+                "nl": "Deze parameter configureert het tijdsinterval voor rapportage van temperatuursensoren. Grotere waarden zullen de levensduur van de batterij van het apparaat verbeteren s(eenheden: seconden)."
+            },
+            "zwave": {
+                "index": 23,
+                "size": 2
+            },
+            "attr": {
+                "min": 1,
+                "max": 32767
+            },
+            "value": 3600
+           },
+           {
+            "id": "24",
+            "type": "number",
+            "label": {
+                "en": "Light Sensor Report Interval",
+                "nl": "Lichtsensor-rapportinterval"
+            },
+            "hint": {
+                "en": "This parameter is configures the time interval for light sensor reporting. Larger values will improve the battery life of the unit (unit: seconds).",
+                "nl": "Deze parameter configureert het tijdsinterval voor rapportage van lichtsensoren. Grotere waarden zullen de levensduur van de batterij van het apparaat verbeteren (eenheden: seconden)."
+            },
+            "zwave": {
+                "index": 24,
+                "size": 2
+            },
+            "attr": {
+                "min": 1,
+                "max": 32767
+            },
+            "value": 3600
+           },
+           {
+            "id": "30",
+            "type": "number",
+            "label": {
+                "en": "Temperature Offset Value",
+                "nl": "Temperatuur offsetwaarde"
+            },
+            "hint": {
+                "en": "This parameter adjusts the currently measured temperature. Temperature Offset Value = [Value] * 0.1 (unit: Celsius/Fahrenheit).",
+                "nl": "Deze parameter past de momenteel gemeten temperatuur aan. Temperatuurcompensatiewaarde = [Waarde] * 0,1 (eenheid: Celsius / Fahrenheit)."
+            },
+            "zwave": {
+                "index": 30,
+                "size": 2
+            },
+            "attr": {
+                "min": -200,
+                "max": 200
+            },
+            "value": 0
+           },
+           {
+            "id": "31",
+            "type": "number",
+            "label": {
+                "en": "Light Intensity Offset Value",
+                "nl": "Lichtintensiteit verschuivingswaarde"
+            },
+            "hint": {
+                "en": "This parameter adjusts the currently measured light intensity (unit: Lux).",
+                "nl": "Deze parameter past de momenteel gemeten lichtintensiteit aan (eenheid: Lux)."
+            },
+            "zwave": {
+                "index": 31,
+                "size": 2
+            },
+            "attr": {
+                "min": -1000,
+                "max": 1000
+            },
+            "value": 0
+           },
+           {
+            "id": "100",
+            "type": "number",
+            "label": {
+                "en": "Light Sensor Calibrated Coefficient",
+                "nl": "Lichtsensor gekalibreerde coëfficiënt"
+            },
+            "hint": {
+                "en": "This configuration defines the calibrated scale for ambient light intensity. Use Luxmeter to calibrate.\nCalibration formula: ([TriSensorValue] / [LuxmeterValue]) * 1024. Round to nearest whole number. (unit: Lux)",
+                "nl": "Deze configuratie definieert de gekalibreerde schaal voor omgevingslichtintensiteit. Gebruik Luxmeter om te kalibreren.\nKalibratieformule: ([TriSensorwaarde] / [LuxmeterValue]) * 1024. Rond naar het dichtstbijzijnde gehele getal."
+            },
+            "zwave": {
+                "index": 100,
+                "size": 2
+            },
+            "attr": {
+                "min": 1,
+                "max": 32767
+            },
+            "value": 1024
+           }
+       ]
+      },
       {
       "id": "DSC-26103ZWEU",
       "name": {
