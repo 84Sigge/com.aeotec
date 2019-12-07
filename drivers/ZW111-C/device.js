@@ -10,6 +10,10 @@ class ZW111C extends ZwaveDevice {
 
         this.registerCapability('measure_power', 'METER');
         this.registerCapability('meter_power', 'METER');
+
+        this.registerReportListener('BASIC', 'BASIC_SET', (report) => {
+          this.setCapabilityValue('onoff', !!report.Value);
+        });
     }
 
 }

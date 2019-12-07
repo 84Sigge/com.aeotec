@@ -8,6 +8,10 @@ class ZW116 extends ZwaveDevice {
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 		this.registerCapability('measure_power', 'METER');
 		this.registerCapability('meter_power', 'METER');
+		
+		this.registerReportListener('BASIC', 'BASIC_SET', (report) => {
+			this.setCapabilityValue('onoff', !!report.Value);
+		});
 	}
 	
 }
