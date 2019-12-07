@@ -1,0 +1,75 @@
+{
+  "id": "DSC19103-ZWEU",
+  "name": {
+    "en": "Micro Smart Dimmer Gen2"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "measure_power",
+    "meter_power"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3
+    ],
+    "productId": [
+      19
+    ],
+    "zwaveAllianceProductId": 766,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/766",
+    "learnmode": {
+      "instruction": {
+        "en": "Short press the action button on the back of the Micro Dimmer.",
+        "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
+      }
+    },
+    "associationGroups": [
+      1,
+      2
+    ],
+    "defaultConfiguration": [
+      {            
+        "id": 80,
+        "value": 2,
+        "size": 1
+      },
+      {
+        "id": 90,
+        "size": 1,
+        "value": 1
+      },
+      {
+        "id": 91,
+        "size": 2,
+        "value": 25
+      },
+      {
+        "id": 92,
+        "size": 1,
+        "value": 30
+      },
+      {
+        "id": 101,
+        "size": 4,
+        "value": 12
+      },
+      {
+        "id": 111,
+        "size": 4,
+        "value": 15
+      }
+    ]
+  }
+}
