@@ -2,7 +2,10 @@
 
 This app adds support for Aeotec devices in Homey.
 
-## Changelog:
+### Changelog:
+
+### v2.0.40
+- Added Smart Switch DSC06106-ZWEU
 
 ### v2.0.39
 - Added Siren 6 (ZW-164).
