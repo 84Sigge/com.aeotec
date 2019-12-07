@@ -6,6 +6,10 @@ class AeotecSmartDimmerSixDevice extends ZwaveDevice {
 	
 	onMeshInit() {
 		this.registerCapability('onoff', 'SWITCH_MULTILEVEL');
+		this.registerReportListener('BASIC', "BASIC_REPORT", (report) => {
+			this.setCapabilityValue('onoff', !!report.Value);
+		});
+		
 		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 
 		this.registerCapability('measure_power', 'METER');

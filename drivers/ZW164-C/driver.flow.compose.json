@@ -1,0 +1,85 @@
+{
+  "triggers": [],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "ZW168-turn_alarm_on",
+      "title": {
+        "en": "Turn siren on",
+        "nl": "Zet sirene aan"
+      },
+      "args": [
+        {
+          "name": "sound",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Doorbell",
+                "nl": "Deurbel"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Alarm Siren",
+                "nl": "Alarm sirene"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Ding dong",
+                "nl": "Ding dong"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Bell Telephone",
+                "nl": "Klassieke telefoon"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Big Ben",
+                "nl": "Big Ben"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Smoke Alarm",
+                "nl": "Rook alarm"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Nuclear Alarm",
+                "nl": "Nuclear alarm"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Ring Alarm",
+                "nl": "Bel alarm"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW168-turn_alarm_off",
+      "title": {
+        "en": "Turn siren off",
+        "nl": "Zet sirene uit"
+      },
+      "args": [ ]
+    }
+  ]
+}

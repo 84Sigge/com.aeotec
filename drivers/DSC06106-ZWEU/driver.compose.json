@@ -1,0 +1,48 @@
+{
+  "id": "DSC06106-ZWEU",
+  "name": {
+    "en": "Smart Energy Switch"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff",
+    "measure_power",
+    "meter_power"
+  ],
+  "images": {
+    "large": "/drivers/DSC06106-ZWEU/assets/images/large.png",
+    "small": "/drivers/DSC06106-ZWEU/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": 3,
+    "productId": 6,
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the Smart Switch to enter learn mode",
+        "nl": "Druk op de actie knop op de Smart Switch om de leer modus te activeren"
+      }
+    },
+    "associationGroups": [
+      1,
+      2
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "size": 1,
+        "value": 2
+      },
+      {
+        "id": 90,
+        "size": 1,
+        "value": 1
+      },
+      {
+        "id": 101,
+        "size": 4,
+        "value": 12
+      }
+    ]
+  }
+}

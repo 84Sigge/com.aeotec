@@ -1,0 +1,45 @@
+{
+    "id": "com.aeotec",
+    "name": {
+      "en": "Aeotec"
+    },
+    "version": "2.0.39",
+    "compatibility": ">=2.4.0",
+    "sdk": 2,
+    "brandColor": "#00A2DA",
+    "category": [
+      "appliances",
+      "lights",
+      "security",
+      "climate"
+    ],
+    "description": {
+      "en": "Aeotec devices for Homey",
+      "nl": "Aeotec ondersteuning voor Homey"
+    },
+    "images": {
+      "large": "/assets/images/large.png",
+      "small": "/assets/images/small.png"
+    },
+    "author": {
+      "name": "Athom B.V.",
+      "email": "info@athom.nl"
+    },
+    "contributors": {
+      "developers": [
+        {
+          "name": "Marco Frijmann",
+          "website": "http://www.frijmann.nl",
+          "email": "marco@frijmann.nl"
+        },
+        {
+          "name": "Remco Mengers",
+          "email": "caseda08@hotmail.com"
+        },
+        {
+          "name": "Jonas Lundblad",
+          "email": "jolnyx@gmail.com"
+        }
+      ]
+    }
+}

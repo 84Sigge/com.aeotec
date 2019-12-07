@@ -6,6 +6,7 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class ZW130 extends ZwaveDevice {
 
 	onMeshInit() {
+		// TODO: add battery type (INTERNAL) to driver.compose
         this._batteryTrigger = this.getDriver().batteryTrigger;
         this._sceneTrigger = this.getDriver().sceneTrigger;
         this._dimTrigger = this.getDriver().dimTrigger;

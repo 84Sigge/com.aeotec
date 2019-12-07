@@ -1,8 +1,8 @@
 {
   "id": "ZW098",
   "name": {
-    "en": "LED Bulb",
-    "nl": "LED lamp"
+    "en": "LED Bulb 5",
+    "nl": "LED lamp gen. 5"
   },
   "class": "light",
   "capabilities": [

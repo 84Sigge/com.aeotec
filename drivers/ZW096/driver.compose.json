@@ -37,7 +37,7 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Z-Wave Plus Lifeline.\r\nThe Hial CC and Basic Report CC (configured by parameter 80) can be sent to the associatd nodes in this group."
+          "en": "Z-Wave Plus Lifeline.\r\nThe Hail CC and Basic Report CC (configured by parameter 80) can be sent to the associated nodes in this group."
         }
       }
     },
