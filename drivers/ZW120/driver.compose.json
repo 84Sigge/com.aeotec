@@ -13,12 +13,20 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
-      2
+      2,
+      514
     ],
     "productId": [
+      42,
       120
     ],
     "zwaveAllianceProductId": 1579,

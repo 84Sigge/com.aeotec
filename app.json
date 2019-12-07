@@ -3,8 +3,8 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.30",
-  "compatibility": ">=1.5.0",
+  "version": "2.0.40",
+  "compatibility": ">=2.4.0",
   "sdk": 2,
   "brandColor": "#00A2DA",
   "category": [
@@ -679,6 +679,96 @@
             "value": "0"
           }
         ]
+      },
+      {
+        "id": "ZW168-turn_alarm_on",
+        "title": {
+          "en": "Turn siren on",
+          "nl": "Zet sirene aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW164-C"
+          },
+          {
+            "name": "sound",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Doorbell",
+                  "nl": "Deurbel"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Alarm Siren",
+                  "nl": "Alarm sirene"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Ding dong",
+                  "nl": "Ding dong"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Bell Telephone",
+                  "nl": "Klassieke telefoon"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Big Ben",
+                  "nl": "Big Ben"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Smoke Alarm",
+                  "nl": "Rook alarm"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Nuclear Alarm",
+                  "nl": "Nuclear alarm"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Ring Alarm",
+                  "nl": "Bel alarm"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZW168-turn_alarm_off",
+        "title": {
+          "en": "Turn siren off",
+          "nl": "Zet sirene uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW164-C"
+          }
+        ]
       }
     ]
   },
@@ -1084,6 +1174,11 @@
         "large": "/drivers/DSA38/assets/images/large.png",
         "small": "/drivers/DSA38/assets/images/small.png"
       },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
@@ -1127,6 +1222,14 @@
       "images": {
         "large": "/drivers/DSB05/assets/images/large.jpg",
         "small": "/drivers/DSB05/assets/images/small.jpg"
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
       },
       "zwave": {
         "manufacturerId": 134,
@@ -1439,6 +1542,12 @@
       "images": {
         "large": "/drivers/DSB45/assets/images/large.png",
         "small": "/drivers/DSB45/assets/images/small.png"
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
       },
       "zwave": {
         "manufacturerId": 134,
@@ -2008,6 +2117,14 @@
       "images": {
         "large": "/drivers/ZW074/assets/images/large.jpg",
         "small": "/drivers/ZW074/assets/images/small.jpg"
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
       },
       "zwave": {
         "manufacturerId": 134,
@@ -2901,6 +3018,11 @@
             "id": 101,
             "size": 4,
             "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 30
           }
         ]
       },
@@ -3286,6 +3408,11 @@
         "large": "/drivers/ZW088/assets/images/large.png",
         "small": "/drivers/ZW088/assets/images/small.png"
       },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
@@ -3364,6 +3491,11 @@
       "images": {
         "large": "/drivers/ZW089/assets/images/large.png",
         "small": "/drivers/ZW089/assets/images/small.png"
+      },
+      "energy": {
+        "batteries": [
+          "CR2"
+        ]
       },
       "zwave": {
         "manufacturerId": 134,
@@ -3876,7 +4008,7 @@
         "associationGroupsOptions": {
           "1": {
             "hint": {
-              "en": "Z-Wave Plus Lifeline.\r\nThe Hial CC and Basic Report CC (configured by parameter 80) can be sent to the associatd nodes in this group."
+              "en": "Z-Wave Plus Lifeline.\r\nThe Hail CC and Basic Report CC (configured by parameter 80) can be sent to the associated nodes in this group."
             }
           }
         },
@@ -4348,8 +4480,8 @@
     {
       "id": "ZW098",
       "name": {
-        "en": "LED Bulb",
-        "nl": "LED lamp"
+        "en": "LED Bulb 5",
+        "nl": "LED lamp gen. 5"
       },
       "class": "light",
       "capabilities": [
@@ -4378,14 +4510,14 @@
         "learnmode": {
           "image": "/drivers/ZW098/assets/learnmode.svg",
           "instruction": {
-            "en": "Quickly turn the LED Bulb off and on again. For secure pairing quickly turn the LED Bulb off and on 5 times.",
-            "nl": "Schakel de LED lamp snel uit en aan. Voor beveiligd koppelen schakel de LED lamp 5 keer snel uit en aan."
+            "en": "Quickly turn the LED Bulb 5 off and on again. For secure pairing quickly turn the LED Bulb 5 off and on 5 times.",
+            "nl": "Schakel de LED lamp gen. 5 snel uit en aan. Voor beveiligd koppelen schakel de LED lamp gen. 5 5 keer snel uit en aan."
           }
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Quickly turn the LED Bulb off and on again 5 times.",
-            "nl": "Schakel de LED lamp vijf maal snel uit en aan."
+            "en": "Quickly turn the LED Bulb 5 off and on again 5 times.",
+            "nl": "Schakel de LED lamp gen. 5 vijf maal snel uit en aan."
           }
         },
         "associationGroups": [
@@ -4400,8 +4532,8 @@
           },
           "2": {
             "hint": {
-              "en": "Forwarding group for all commands sent to the LED Bulb by the main controller.",
-              "nl": "Doorstuur groep voor alle commando's verstuurd naar de LED lamp door de main controller."
+              "en": "Forwarding group for all commands sent to the LED Bulb 5 by the main controller.",
+              "nl": "Doorstuur groep voor alle commando's verstuurd naar de LED lamp gen. 5 door de main controller."
             }
           }
         },
@@ -4453,9 +4585,11 @@
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          3
+          3,
+          515
         ],
         "productId": [
+          20,
           99
         ],
         "zwaveAllianceProductId": 1519,
@@ -4892,6 +5026,12 @@
       "images": {
         "large": "/drivers/ZW100/assets/images/large.png",
         "small": "/drivers/ZW100/assets/images/small.png"
+      },
+      "energy": {
+        "batteries": [
+          "CR123A",
+          "CR123A"
+        ]
       },
       "zwave": {
         "manufacturerId": 134,
@@ -5794,12 +5934,14 @@
           }
         },
         "associationGroups": [
-          1
+          1,
+          3,
+          4
         ],
         "defaultConfiguration": [
           {
             "id": 80,
-            "value": 3,
+            "value": 2,
             "size": 1
           },
           {
@@ -6086,12 +6228,20 @@
         "large": "/drivers/ZW120/assets/images/large.png",
         "small": "/drivers/ZW120/assets/images/small.png"
       },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          2
+          2,
+          514
         ],
         "productId": [
+          42,
           120
         ],
         "zwaveAllianceProductId": 1579,
@@ -6595,14 +6745,17 @@
         "large": "/drivers/ZW122/assets/images/large.png",
         "small": "/drivers/ZW122/assets/images/small.png"
       },
+      "energy": {
+        "batteries": [
+          "CR123A"
+        ]
+      },
       "zwave": {
         "manufacturerId": 134,
         "productTypeId": [
-          2,
-          514
+          2
         ],
         "productId": [
-          120,
           122
         ],
         "zwaveAllianceProductId": 1579,
@@ -7526,6 +7679,10 @@
             "value": 30
           }
         ],
+        "associationGroupsMultiChannel": [
+          3,
+          4
+        ],
         "multiChannelNodes": {
           "1": {
             "name": {
@@ -7801,7 +7958,7 @@
         "defaultConfiguration": [
           {
             "id": 80,
-            "value": 3,
+            "value": 2,
             "size": 1
           },
           {
@@ -8039,7 +8196,8 @@
           515
         ],
         "productId": [
-          132
+          132,
+          140
         ],
         "zwaveAllianceProductId": 2286,
         "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
@@ -8057,17 +8215,11 @@
             "id": 80,
             "value": 2,
             "size": 1
-          },
-          {
-            "id": 90,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 92,
-            "size": 1,
-            "value": 30
           }
+        ],
+        "associationGroupsMultiChannel": [
+          3,
+          4
         ],
         "multiChannelNodes": {
           "1": {
@@ -8290,6 +8442,298 @@
                 "en": "Basic Set",
                 "nl": "Basic Set"
               }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZW164-C",
+      "name": {
+        "en": "Indoor Siren 6"
+      },
+      "class": "other",
+      "capabilities": [
+        "onoff.siren"
+      ],
+      "images": {
+        "large": "/drivers/ZW164-C/assets/images/large.jpg",
+        "small": "/drivers/ZW164-C/assets/images/small.jpg"
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          164
+        ],
+        "zwaveAllianceProductId": 1141,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1141/Siren Gen5 Manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Indoor Siren 6",
+            "nl": "Druk op de actie knop op de Indoor Siren 6"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Quickly press the action button on the Indoor Siren 6 6 times.",
+            "nl": "Druk 6 keer snel achter elkaar op de actie knop van de Indoor Siren 6."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Siren is received the commands sent by controller to be turned on or off, the Siren will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n"
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "default_sound",
+          "type": "dropdown",
+          "label": {
+            "en": "Default sound",
+            "nl": "Standaard geluid"
+          },
+          "hint": {
+            "en": "This setting determines which sound should be played by default.",
+            "nl": "Deze instelling bepaalt welk geluid er standaard afgespeeld wordt."
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Doorbell",
+                "nl": "Deurbel"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Alarm Siren",
+                "nl": "Alarm sirene"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Ding dong",
+                "nl": "Ding dong"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Bell Telephone",
+                "nl": "Klassieke telefoon"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Big Ben",
+                "nl": "Big Ben"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Smoke Alarm",
+                "nl": "Rook alarm"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Nuclear Alarm",
+                "nl": "Nuclear alarm"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Ring Alarm",
+                "nl": "Bel alarm"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZWA008",
+      "name": {
+        "en": "Door/Window Sensor 7 (ZWA008)"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_contact",
+        "alarm_tamper"
+      ],
+      "images": {
+        "large": "/drivers/ZWA008/assets/images/large.png",
+        "small": "/drivers/ZWA008/assets/images/small.png"
+      },
+      "energy": {
+        "batteries": [
+          "LS14250"
+        ]
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          7
+        ],
+        "zwaveAllianceProductId": 2286,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZWA008/assets/learnmode.svg",
+          "instruction": {
+            "en": "Remove the cover of Door/Window Sensor 7 (ZWA008), then press the black button three times.",
+            "nl": "Verwijder de deksel van Door/Window Sensor 7 (ZWA008), druk daarna drie keer op het zwarte knopje."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          }
+        ]
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Contact sensor",
+            "nl": "Contact sensor"
+          },
+          "collapsed": false,
+          "children": [
+            {
+              "zwave": {
+                "index": 3,
+                "size": 1
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "No indications",
+                    "nl": "Geen indicatie"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "indication on change in opening state",
+                    "nl": "indicatie bij het openen/sluiten"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "indication on wake up",
+                    "nl": "indicatie bij het ontwaken"
+                  }
+                },
+                {
+                  "id": "4",
+                  "label": {
+                    "en": "indication on device tampering",
+                    "nl": "indicatie bij sabotage"
+                  }
+                }
+              ],
+              "value": "7",
+              "id": "led_indications",
+              "label": {
+                "en": "LED light style",
+                "nl": "LED licht stijl"
+              },
+              "hint": {
+                "en": "This parameter (3) determines the way in which the LED behaves after events have been detected.",
+                "nl": "Deze parameter (3) bepaalt het gedrag van de LED wanneer er een statusverandering is gedetecteerd."
+              },
+              "type": "dropdown"
+            },
+            {
+              "zwave": {
+                "index": 2,
+                "size": 1
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Closed by default",
+                    "nl": "Normaal gesloten"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "Opened by default",
+                    "nl": "Normaal open"
+                  }
+                }
+              ],
+              "id": "door_window_state",
+              "type": "radio",
+              "label": {
+                "en": "Default position for sensor",
+                "nl": "Standaard positie voor sensor"
+              },
+              "hint": {
+                "en": "This parameter (2) determines the default position for this sensor.",
+                "nl": "Deze parameter (2) bepaalt de standaard positite van de sensor."
+              },
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Tamper alarm",
+            "nl": "Sabotage alarm"
+          },
+          "collapsed": true,
+          "children": [
+            {
+              "zwave": {
+                "index": 11,
+                "size": 2
+              },
+              "attr": {
+                "min": 0,
+                "max": 32400
+              },
+              "value": 5,
+              "id": "tamper_cancellation_delay",
+              "label": {
+                "en": "Cancellation delay (s)",
+                "nl": "Annuleringsperiode (s)"
+              },
+              "hint": {
+                "en": "This parameter (11) sets the time after which the alarm will be cancelled.",
+                "nl": "Deze parameter (11) bepaalt de tijd waarna het alarm wordt gedeactiveerd."
+              },
+              "type": "number"
             }
           ]
         }

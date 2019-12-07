@@ -50,6 +50,7 @@
         "value": 30
       }
     ],
+    "associationGroupsMultiChannel": [ 3, 4 ],
     "multiChannelNodes": {
       "1": {
         "name": {

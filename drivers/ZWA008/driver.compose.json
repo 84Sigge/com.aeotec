@@ -1,0 +1,47 @@
+{
+  "id": "ZWA008",
+  "name": {
+    "en": "Door/Window Sensor 7 (ZWA008)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_contact",
+    "alarm_tamper"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "LS14250" ]
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      2
+    ],
+    "productId": [
+      7
+    ],
+    "zwaveAllianceProductId": 2286,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Remove the cover of {{driverNameEn}}, then press the black button three times.",
+        "nl": "Verwijder de deksel van {{driverNameNl}}, druk daarna drie keer op het zwarte knopje."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      }
+    ]
+  }
+}
