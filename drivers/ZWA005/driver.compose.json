@@ -1,0 +1,49 @@
+{
+  "id": "ZWA005",
+  "name": {
+    "en": "TriSensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_motion",
+    "measure_temperature",
+    "measure_luminance"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": 2,
+    "productId": 5,
+    "zwaveAllianceProductId": 2898,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2898/TriSensor%20user%20manual%2020180416.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "To include or remove: press the Action Button on the {{driverNameEn}}",
+        "nl": "Om op te nemen: druk op de actieknop op {{driverNameEn}}."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "This is the lifeline, it is not recommended to remove Homey's id from this association group.",
+          "nl": "Dit is de levenslijn, het is niet aangeraden om Homey's zijn id te verwijderen uit deze associatie groep."
+        }
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 4,
+        "value": 1,
+        "size": 1
+      }
+    ]
+  }
+}
