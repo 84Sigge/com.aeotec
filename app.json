@@ -3,7 +3,7 @@
   "name": {
     "en": "Aeotec"
   },
-  "version": "2.0.39",
+  "version": "2.0.40",
   "compatibility": ">=2.4.0",
   "sdk": 2,
   "brandColor": "#00A2DA",
@@ -39,6 +39,10 @@
       {
         "name": "Jonas Lundblad",
         "email": "jolnyx@gmail.com"
+      },
+      {
+        "name": "Johan Bendz",
+        "email": "johan_bendz@hotmail.com"
       }
     ]
   },
