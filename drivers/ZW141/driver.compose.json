@@ -1,0 +1,32 @@
+{
+  "id": "ZW141",
+  "name": {
+    "en": "Nano Shutter (ZW141)"
+  },
+  "class": "other",
+  "capabilities": [
+    "windowcoverings_state"
+  ],
+  "images": {
+    "large": "/drivers/ZW141/assets/images/large.png",
+    "small": "/drivers/ZW141/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3
+    ],
+    "productId": [
+      141
+    ],
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the back of the Nano Shutter (ZW141)"
+      }
+    },
+    "associationGroups": [
+      1,
+  2
+    ]
+  }
+}

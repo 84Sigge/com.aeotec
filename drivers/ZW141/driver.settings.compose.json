@@ -1,0 +1,160 @@
+[
+    {
+      "id": "35",
+      "type": "number",
+      "label": {
+        "en": "Set the moving time from up (left) to down (right) for curtain"
+      },
+      "zwave": {
+        "index": 35,
+        "size": 1
+      },
+      "value": 30
+    },
+    {
+      "id": "80",
+      "type": "dropdown",
+      "label": {
+        "en": "To set which report would be sent to the associated nodes in association group 1 when the state of output load is changed"
+      },
+      "zwave": {
+        "index": 80,
+        "size": 1
+      },
+      "value": "0",
+      "values": [
+        {
+          "id": "0",
+          "label": {
+            "en": "Nothing"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "en": "Basic Report CC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "85",
+      "type": "dropdown",
+      "label": {
+        "en": "Set the operation mode of external switch"
+      },
+      "zwave": {
+        "index": 85,
+        "size": 1
+      },
+      "value": "0",
+      "values": [
+        {
+          "id": "0",
+          "label": {
+            "en": "Operation Mode 1"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "en": "Operation Mode 2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "120",
+      "type": "dropdown",
+      "label": {
+        "en": "Set the external switch mode of S1"
+      },
+      "hint": {
+        "en": "When the switch mode of S1 is determined or identified or configured, this mode value will not be reset after exclusion"
+      },
+      "zwave": {
+        "index": 120,
+        "size": 1
+      },
+      "value": "0",
+      "values": [
+        {
+          "id": "0",
+          "label": {
+            "en": "Unidentified mode"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "en": "2-state switch mode"
+          }
+        },
+  {
+          "id": "2",
+          "label": {
+            "en": "3 way switch mode"
+          }
+        },
+  {
+          "id": "3",
+          "label": {
+            "en": "Push button mode"
+          }
+        },
+  {
+          "id": "4",
+          "label": {
+            "en": "Enter automatic identification mode (The blue Led will fast blink)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "121",
+      "type": "dropdown",
+      "label": {
+        "en": "Set the external switch mode of S2"
+      },
+      "hint": {
+        "en": "When the switch mode of S2 is determined or identified or configured, this mode value will not be reset after exclusion"
+      },
+      "zwave": {
+        "index": 121,
+        "size": 1
+      },
+      "value": "0",
+      "values": [
+        {
+          "id": "0",
+          "label": {
+            "en": "Unidentified mode"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "en": "2-state switch mode"
+          }
+        },
+  {
+          "id": "2",
+          "label": {
+            "en": "3 way switch mode"
+          }
+        },
+  {
+          "id": "3",
+          "label": {
+            "en": "Push button mode"
+          }
+        },
+  {
+          "id": "4",
+          "label": {
+            "en": "Enter automatic identification mode (The blue Led will fast blink)"
+          }
+        }
+      ]
+    }
+]
