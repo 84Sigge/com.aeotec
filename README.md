@@ -11,6 +11,8 @@ This app adds support for Aeotec devices in Homey.
 - Added Micro Smart Switch G2 (DSC18103-ZWEU)
 - Added Micro Smart Dimmer G2 (DSC19103-ZWEU)
 - Added TriSensor (ZWA005)
+- Added Nano Shutter (ZW141)
+- Added Home Energy Meter Gen5 - 3 phase (ZW095-3C)
 
 ### v2.0.39
 - Added Siren 6 (ZW-164).
