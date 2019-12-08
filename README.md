@@ -5,11 +5,12 @@ This app adds support for Aeotec devices in Homey.
 ### Changelog:
 
 ### v2.0.40
-- Added Smart Switch DSC06106-ZWEU
-- Added Micro Switch G2
-- Added Micro Dimmer G2
-- Added Micro Smart Switch G2
-- Added Micro Smart Dimmer G2
+- Added Smart Switch (DSC06106-ZWEU)
+- Added Micro Switch G2 (DSC-26103ZWEU)
+- Added Micro Dimmer G2 (DSC-27103ZWEU)
+- Added Micro Smart Switch G2 (DSC18103-ZWEU)
+- Added Micro Smart Dimmer G2 (DSC19103-ZWEU)
+- Added TriSensor (ZWA005)
 
 ### v2.0.39
 - Added Siren 6 (ZW-164).
