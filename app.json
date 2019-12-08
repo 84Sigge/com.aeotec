@@ -773,2621 +773,6 @@
     ]
   },
   "drivers": [
-          {
-          "id": "ZW141",
-          "name": {
-            "en": "Nano Shutter (ZW141)"
-          },
-          "class": "other",
-          "capabilities": [
-            "windowcoverings_state"
-          ],
-          "images": {
-            "large": "/drivers/ZW141/assets/images/large.png",
-            "small": "/drivers/ZW141/assets/images/small.png"
-          },
-          "zwave": {
-            "manufacturerId": 134,
-            "productTypeId": [
-              3
-            ],
-            "productId": [
-              141
-            ],
-            "learnmode": {
-              "instruction": {
-                "en": "Press the action button on the back of the Nano Shutter (ZW141)"
-              }
-            },
-            "associationGroups": [
-              1,
-          2
-            ]
-          },
-          "settings": [
-            {
-              "id": "35",
-              "type": "number",
-              "label": {
-                "en": "Set the moving time from up (left) to down (right) for curtain"
-              },
-              "zwave": {
-                "index": 35,
-                "size": 1
-              },
-              "value": 30
-            },
-            {
-              "id": "80",
-              "type": "dropdown",
-              "label": {
-                "en": "To set which report would be sent to the associated nodes in association group 1 when the state of output load is changed"
-              },
-              "zwave": {
-                "index": 80,
-                "size": 1
-              },
-              "value": "0",
-              "values": [
-                {
-                  "id": "0",
-                  "label": {
-                    "en": "Nothing"
-                  }
-                },
-                {
-                  "id": "1",
-                  "label": {
-                    "en": "Basic Report CC"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "85",
-              "type": "dropdown",
-              "label": {
-                "en": "Set the operation mode of external switch"
-              },
-              "zwave": {
-                "index": 85,
-                "size": 1
-              },
-              "value": "0",
-              "values": [
-                {
-                  "id": "0",
-                  "label": {
-                    "en": "Operation Mode 1"
-                  }
-                },
-                {
-                  "id": "1",
-                  "label": {
-                    "en": "Operation Mode 2"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "120",
-              "type": "dropdown",
-              "label": {
-                "en": "Set the external switch mode of S1"
-              },
-              "hint": {
-                "en": "When the switch mode of S1 is determined or identified or configured, this mode value will not be reset after exclusion"
-              },
-              "zwave": {
-                "index": 120,
-                "size": 1
-              },
-              "value": "0",
-              "values": [
-                {
-                  "id": "0",
-                  "label": {
-                    "en": "Unidentified mode"
-                  }
-                },
-                {
-                  "id": "1",
-                  "label": {
-                    "en": "2-state switch mode"
-                  }
-                },
-          {
-                  "id": "2",
-                  "label": {
-                    "en": "3 way switch mode"
-                  }
-                },
-          {
-                  "id": "3",
-                  "label": {
-                    "en": "Push button mode"
-                  }
-                },
-          {
-                  "id": "4",
-                  "label": {
-                    "en": "Enter automatic identification mode (The blue Led will fast blink)"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "121",
-              "type": "dropdown",
-              "label": {
-                "en": "Set the external switch mode of S2"
-              },
-              "hint": {
-                "en": "When the switch mode of S2 is determined or identified or configured, this mode value will not be reset after exclusion"
-              },
-              "zwave": {
-                "index": 121,
-                "size": 1
-              },
-              "value": "0",
-              "values": [
-                {
-                  "id": "0",
-                  "label": {
-                    "en": "Unidentified mode"
-                  }
-                },
-                {
-                  "id": "1",
-                  "label": {
-                    "en": "2-state switch mode"
-                  }
-                },
-          {
-                  "id": "2",
-                  "label": {
-                    "en": "3 way switch mode"
-                  }
-                },
-          {
-                  "id": "3",
-                  "label": {
-                    "en": "Push button mode"
-                  }
-                },
-          {
-                  "id": "4",
-                  "label": {
-                    "en": "Enter automatic identification mode (The blue Led will fast blink)"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-        "id": "ZW095-3C",
-        "name": {
-          "en": "Home Energy Meter Gen5 - 3 phase"
-        },
-        "class": "sensor",
-        "capabilities": [
-          "measure_power",
-          "meter_power",
-          "measure_voltage",
-          "measure_current"
-        ],
-        "images": {
-          "large": "/drivers/ZW095-3C/assets/images/large.png",
-          "small": "/drivers/ZW095-3C/assets/images/small.png"
-        },
-        "zwave": {
-          "manufacturerId": 134,
-          "productTypeId": [
-            2
-          ],
-          "productId": [
-            95
-          ],
-          "learnmode": {
-            "instruction": {
-              "en": "Press the action button on the Home Energy Meter Gen5"
-            }
-          },
-          "associationGroups": [
-            1
-          ],
-      "multiChannelNodes": {
-            "1": {
-              "class": "sensor",
-              "capabilities": [
-                "measure_power",
-                "meter_power",
-                "measure_voltage",
-                "measure_current"
-              ],
-              "name": {
-                "en": "Clamp 01"
-              },
-              "icon": "/drivers/ZW095-3C/assets/icon.svg",
-              "settings": []
-            },
-        "2": {
-              "class": "sensor",
-              "capabilities": [
-                "measure_power",
-                "meter_power",
-                "measure_voltage",
-                "measure_current"
-              ],
-              "name": {
-                "en": "Clamp 02"
-              },
-              "icon": "/drivers/ZW095-3C/assets/icon.svg",
-              "settings": []
-            },
-        "3": {
-              "class": "sensor",
-              "capabilities": [
-                "measure_power",
-                "meter_power",
-                "measure_voltage",
-                "measure_current"
-              ],
-              "name": {
-                "en": "Clamp 03"
-              },
-              "icon": "/drivers/ZW095-3C/assets/icon.svg",
-              "settings": []
-            }
-          }
-        },
-        "settings": [
-          {
-            "id": "2",
-            "type": "dropdown",
-            "label": {
-              "en": "Energy detection mode",
-              "nl": "Detectie modus voor stroom"
-            },
-            "hint": {
-              "en": "This parameter (2) determines the energy detection mode for the reports of parameter 103 and 104.",
-              "nl": "Deze parameter (2) bepaalt de detectie modus voor de rapportages van parameter 103 en 104."
-            },
-            "zwave": {
-              "index": 2,
-              "size": 1
-            },
-            "value": "0",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "Report power, report the absolute value of energy."
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "Report positive/negative power, report the algebraic sum of energy."
-                }
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "value": true,
-            "label": {
-              "en": "Enable/disable selective reporting only when power change reaches a certain threshold or percentage"
-            },
-            "hint": {
-              "en": "This parameter (3) determines whether or not to limit reporting power changes to only report when the change is above the threshold.",
-              "nl": "Deze parameter (3) bepaalt of het apparaat alleen rapporteerd als de verandering groter is dan de ingestelde drempel."
-            },
-            "zwave": {
-              "index": 3,
-              "size": 1
-            },
-            "type": "checkbox"
-          },
-          {
-            "id": "4",
-            "type": "number",
-            "label": {
-              "en": "Wattage threshold for automatic reporting",
-              "nl": "Wattage drempel voor automatische rapportage"
-            },
-            "hint": {
-              "en": "This parameter (4) determines the threshold change in wattage before an automatic report is send to Homey.",
-              "nl": "Deze parameter (4) bepaalt de drempel voor wattage veranderingen voordat er automatisch een rapport wordt verzonden naar Homey."
-            },
-            "zwave": {
-              "index": 4,
-              "size": 2,
-              "signed": false
-            },
-            "attr": {
-              "min": 0,
-              "max": 60000
-            },
-            "value": 50
-          },
-          {
-            "id": "5",
-            "type": "number",
-            "label": {
-              "en": "Wattage threshold for automatic reporting, Clamp 1",
-              "nl": "Wattage drempel voor automatische rapportage, Clamp 1"
-            },
-            "hint": {
-              "en": "This parameter (5) determines the threshold change in wattage on Clamp 1 before an automatic report is send to Homey.",
-              "nl": "Deze parameter (5) bepaalt de drempel voor wattage veranderingen op Clamp 1 voordat er automatisch een rapport wordt verzonden naar Homey."
-            },
-            "zwave": {
-              "index": 5,
-              "size": 2,
-              "signed": false
-            },
-            "attr": {
-              "min": 0,
-              "max": 60000
-            },
-            "value": 50
-          },
-          {
-            "id": "6",
-            "type": "number",
-            "label": {
-              "en": "Wattage threshold for automatic reporting, Clamp 2",
-              "nl": "Wattage drempel voor automatische rapportage, Clamp 2"
-            },
-            "hint": {
-              "en": "This parameter (6) determines the threshold change in wattage on Clamp 2 before an automatic report is send to Homey.",
-              "nl": "Deze parameter (6) bepaalt de drempel voor wattage veranderingen op Clamp 2 voordat er automatisch een rapport wordt verzonden naar Homey."
-            },
-            "zwave": {
-              "index": 6,
-              "size": 2,
-              "signed": false
-            },
-            "attr": {
-              "min": 0,
-              "max": 60000
-            },
-            "value": 50
-          },
-          {
-            "id": "7",
-            "type": "number",
-            "label": {
-              "en": "Wattage threshold for automatic reporting, Clamp 3",
-              "nl": "Wattage drempel voor automatische rapportage, Clamp 3"
-            },
-            "hint": {
-              "en": "This parameter (7) determines the threshold change in wattage on Clamp 3 before an automatic report is send to Homey.",
-              "nl": "Deze parameter (7) bepaalt de drempel voor wattage veranderingen op Clamp 3 voordat er automatisch een rapport wordt verzonden naar Homey."
-            },
-            "zwave": {
-              "index": 7,
-              "size": 2,
-              "signed": false
-            },
-            "attr": {
-              "min": 0,
-              "max": 60000
-            },
-            "value": 50
-          },
-          {
-            "id": "8",
-            "type": "number",
-            "label": {
-              "en": "Percentage wattage threshold for automatic reporting",
-              "nl": "Wattage drempel in procenten voor automatische rapportage"
-            },
-            "hint": {
-              "en": "This parameter (8) determines the percentage threshold for wattage changes to trigger an automatic report.",
-              "nl": "Deze parameter (8) bepaalt de minimale verandering in procenten van het wattage voorat er een automatisch rapport wordt verzonden."
-            },
-            "zwave": {
-              "index": 8,
-              "size": 1
-            },
-            "attr": {
-              "min": 0,
-              "max": 100
-            },
-            "value": 80
-          },
-          {
-            "id": "9",
-            "type": "number",
-            "label": {
-              "en": "Percentage wattage threshold for automatic reporting, Clamp 1",
-              "nl": "Wattage drempel in procenten voor automatische rapportage, Clamp 1"
-            },
-            "hint": {
-              "en": "This parameter (9) determines the percentage threshold for wattage on Clamp 1 changes to trigger an automatic report.",
-              "nl": "Deze parameter (9) bepaalt de minimale verandering in procenten van het wattage op Clamp 1 voordat er een automatisch rapport wordt verzonden."
-            },
-            "zwave": {
-              "index": 9,
-              "size": 1
-            },
-            "attr": {
-              "min": 0,
-              "max": 100
-            },
-            "value": 80
-          },
-          {
-            "id": "10",
-            "type": "number",
-            "label": {
-              "en": "Percentage wattage threshold for automatic reporting, Clamp 2",
-              "nl": "Wattage drempel in procenten voor automatische rapportage, Clamp 2"
-            },
-            "hint": {
-              "en": "This parameter (10) determines the percentage threshold for wattage on Clamp 2 changes to trigger an automatic report.",
-              "nl": "Deze parameter (10) bepaalt de minimale verandering in procenten van het wattage op Clamp 2 voordat er een automatisch rapport wordt verzonden."
-            },
-            "zwave": {
-              "index": 10,
-              "size": 1
-            },
-            "attr": {
-              "min": 0,
-              "max": 100
-            },
-            "value": 80
-          },
-          {
-            "id": "11",
-            "type": "number",
-            "label": {
-              "en": "Percentage wattage threshold for automatic reporting, Clamp 3",
-              "nl": "Wattage drempel in procenten voor automatische rapportage, Clamp 3"
-            },
-            "hint": {
-              "en": "This parameter (11) determines the percentage threshold for wattage on Clamp 3 changes to trigger an automatic report.",
-              "nl": "Deze parameter (11) bepaalt de minimale verandering in procenten van het wattage op Clamp 3 voordat er een automatisch rapport wordt verzonden."
-            },
-            "zwave": {
-              "index": 11,
-              "size": 1
-            },
-            "attr": {
-              "min": 0,
-              "max": 100
-            },
-            "value": 80
-          },
-          {
-            "id": "101",
-            "type": "number",
-            "label": {
-              "en": "Association group 1 report type",
-              "nl": "Rapport type associatie groep 1"
-            },
-            "hint": {
-              "en": "This parameter (101) determines the type of reports sent to devices in the 1st association group.",
-              "nl": "Deze parameter (101) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e associatie groep."
-            },
-            "zwave": {
-              "index": 101,
-              "size": 4
-            },
-            "value": 2
-          },
-          {
-            "id": "102",
-            "type": "number",
-            "label": {
-              "en": "Association group 2 report type",
-              "nl": "Rapport type associatie groep 2"
-            },
-            "hint": {
-              "en": "This parameter (102) determines the type of reports sent to devices in the 2nd association group.",
-              "nl": "Deze parameter (102) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e associatie groep."
-            },
-            "zwave": {
-              "index": 102,
-              "size": 4
-            },
-            "value": 12
-          },
-          {
-            "id": "103",
-            "type": "number",
-            "label": {
-              "en": "Association group 3 report type",
-              "nl": "Rapport type associatie groep 3"
-            },
-            "hint": {
-              "en": "This parameter (103) determines the type of reports sent to devices in the 3rd association group.",
-              "nl": "Deze parameter (103) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e associatie groep."
-            },
-            "zwave": {
-              "index": 103,
-              "size": 4
-            },
-            "value": 1
-          },
-          {
-            "id": "111",
-            "type": "number",
-            "label": {
-              "en": "Report interval association group 1",
-              "nl": "Rapportage interval associatie groep 1"
-            },
-            "hint": {
-              "en": "This parameter (111) determines the interval for sending report to devices in association group 1.",
-              "nl": "Deze parameter (111) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste associatie groep."
-            },
-            "zwave": {
-              "index": 111,
-              "size": 4
-            },
-            "value": 300
-          },
-          {
-            "id": "112",
-            "type": "number",
-            "label": {
-              "en": "Report interval association group 2",
-              "nl": "Rapportage interval associatie groep 2"
-            },
-            "hint": {
-              "en": "This parameter (112) determines the interval for sending report to devices in association group 2.",
-              "nl": "Deze parameter (112) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e associatie groep."
-            },
-            "zwave": {
-              "index": 112,
-              "size": 4
-            },
-            "value": 300
-          },
-          {
-            "id": "113",
-            "type": "number",
-            "label": {
-              "en": "Report interval association group 3",
-              "nl": "Rapportage interval associatie groep 3"
-            },
-            "hint": {
-              "en": "This parameter (113) determines the interval for sending report to devices in association group 3.",
-              "nl": "Deze parameter (113) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e associatie groep."
-            },
-            "zwave": {
-              "index": 113,
-              "size": 4
-            },
-            "value": 300
-          }
-          ]
-        },
-        {
-        "id": "ZWA005",
-        "name": {
-            "en": "TriSensor"
-        },
-        "class": "sensor",
-        "capabilities": [
-            "measure_battery",
-            "alarm_motion",
-            "measure_temperature",
-            "measure_luminance"
-        ],
-        "images": {
-            "large": "/drivers/ZWA005/assets/images/large.png",
-            "small": "/drivers/ZWA005/assets/images/small.png"
-        },
-        "zwave": {
-            "manufacturerId": 881,
-            "productTypeId": 2,
-            "productId": 5,
-            "zwaveAllianceProductId": 2898,
-            "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2898/TriSensor%20user%20manual%2020180416.pdf",
-            "learnmode": {
-            "image": "/drivers/ZWA005/assets/learnmode.svg",
-            "instruction": {
-                "en": "To include or remove: press the Action Button on the TriSensor",
-                "nl": "Om op te nemen: druk op de actieknop op TriSensor."
-            }
-            },
-            "associationGroups": [
-            1
-            ],
-            "associationGroupsOptions": {
-            "1": {
-                "hint": {
-                "en": "This is the lifeline, it is not recommended to remove Homey's id from this association group.",
-                "nl": "Dit is de levenslijn, het is niet aangeraden om Homey's zijn id te verwijderen uit deze associatie groep."
-                }
-            }
-            },
-            "defaultConfiguration": [
-            {
-                "id": 4,
-                "value": 1,
-                "size": 1
-            }
-            ]
-        },
-        "settings": [
-            {
-            "id": "1",
-            "type": "number",
-            "label": {
-                "en": "Motion Retrigger Time",
-                "nl": "Bewegingsrempeltijd"
-            },
-            "hint": {
-                "en": "This parameter configures the delay time before the motion sensor can be triggered again.\nValue = 0 will disable motion sensor from triggering until motion timeout has finished (unit: seconds).",
-                "nl": "Deze parameter configureert de vertragingstijd voordat de bewegingssensor opnieuw kan worden geactiveerd.\nWaarde = 0 schakelt de bewegingssensor uit tot de beweging timeout is voltooid (eenheden: seconden)."
-            },
-            "zwave": {
-                "index": 1,
-                "size": 2
-            },
-            "attr": {
-                "min": 0,
-                "max": 32767
-            },
-            "value": 30
-            },
-            {
-            "id": "2",
-            "type": "number",
-            "label": {
-                "en": "Motion Timeout",
-                "nl": "Motion Time-out"
-            },
-            "hint": {
-                "en": "This parameter configures the time to clear a motion event in seconds",
-                "nl": "Deze parameter configureert de tijd om een bewegingsgebeurtenis in seconden te wissen"
-            },
-            "zwave": {
-                "index": 2,
-                "size": 2
-            },
-            "attr": {
-                "min": 1,
-                "max": 32767
-            },
-            "value": 240
-            },
-            {
-            "id": "3",
-            "type": "dropdown",
-            "label": {
-                "en": "Motion Sensitivity",
-                "nl": "Bewegingsgevoeligheid"
-            },
-            "hint": {
-                "en": "Value = 0 will disable the PIR/motion sensor",
-                "nl": "Waarde = 0 schakelt de PIR/bewegingssensor uit"
-            },
-            "zwave": {
-                "index": 3,
-                "size": 1
-            },
-            "value": "11",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Off",
-                    "nl": "Uit"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Level 1 (minimum)",
-                    "nl": "Level 1 (minimum)"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Level 2",
-                    "nl": "Level 2"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Level 3",
-                    "nl": "Level 3"
-                }
-                },
-                {
-                "id": "4",
-                "label": {
-                    "en": "Level 4",
-                    "nl": "Level 4"
-                }
-                },
-                {
-                "id": "5",
-                "label": {
-                    "en": "Level 5",
-                    "nl": "Level 5"
-                }
-                },
-                {
-                "id": "6",
-                "label": {
-                    "en": "Level 6",
-                    "nl": "Level 6"
-                }
-                },
-                {
-                "id": "7",
-                "label": {
-                    "en": "Level 7",
-                    "nl": "Level 7"
-                }
-                },
-                {
-                "id": "8",
-                "label": {
-                    "en": "Level 8",
-                    "nl": "Level 8"
-                }
-                },
-                {
-                "id": "9",
-                "label": {
-                    "en": "Level 9",
-                    "nl": "Level 9"
-                }
-                },
-                {
-                "id": "10",
-                "label": {
-                    "en": "Level 10",
-                    "nl": "Level 10"
-                }
-                },
-                {
-                "id": "11",
-                "label": {
-                    "en": "Level 11 (maximum)",
-                    "nl": "Level 11 (maximum)"
-                }
-                }
-            ]
-            },
-            {
-            "id": "4",
-            "type": "checkbox",
-            "label": {
-                "en": "Binary Sensor Report Enable",
-                "nl": "Binaire sensorrapport inschakelen"
-            },
-            "hint": {
-                "en": "Disables/Enables binary report when motion event is detected or cleared",
-                "nl": "Schakelt binair rapport in/uit wanneer bewegingsgebeurtenis wordt gedetecteerd of gewist"
-            },
-            "zwave": {
-                "index": 4,
-                "size": 1
-            },
-            "value": true
-            },
-            {
-            "id": "5",
-            "type": "dropdown",
-            "label": {
-                "en": "BASIC_SET to associated nodes.",
-                "nl": "BASIC_SET naar geassocieerde knooppunten"
-            },
-            "hint": {
-                "en": "This parameter configures send BASIC_SET command to nodes that are associated in group 2 and group 3.",
-                "nl": "Deze parameter wordt de opdracht BASIC_SET verzenden geconfigureerd naar knooppunten die zijn gekoppeld aan groep 2 en groep 3."
-            },
-            "zwave": {
-                "index": 5,
-                "size": 1
-            },
-            "value": "3",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Disable All Group Basic Set Command",
-                    "nl": "Alle groepsbasissetopdracht uitgeschakeld"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Enable Group 2 Basic Set Command, Group 3 Basic Set Command is disabled",
-                    "nl": "Ingeschakeld groep 2 basisset commando, groep 3 basisset commando is uitgeschakeld"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Enable Group 3 Basic Set Command, Group 2 Basic Set Command is disabled",
-                    "nl": "Ingeschakeld groep 3 basisset commando, groep 2 basisset commando is uitgeschakeld"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Enable Group 2 and Group 3 Basic Set Command",
-                    "nl": "Ingeschakeld commando voor groep 2 en groep 3 basisset"
-                }
-                }
-            ]
-            },
-            {
-            "id": "6",
-            "type": "dropdown",
-            "label": {
-                "en": "BASIC_SET Value Settings for Group 2",
-                "nl": "BASIC_SET waarde-instellingen voor Groep 2"
-            },
-            "hint": {
-                "en": "This parameter configures send BASIC_SET command to nodes that are associated in group 2 and group 3.",
-                "nl": "Deze parameter wordt de opdracht BASIC_SET verzenden geconfigureerd naar knooppunten die zijn gekoppeld aan groep 2 en groep 3."
-            },
-            "zwave": {
-                "index": 6,
-                "size": 1
-            },
-            "value": "0",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Send BASIC_SET = 0xFF when motion event is triggered. Send BASIC_SET = 0x00 when motion event is cleared",
-                    "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis wordt geactiveerd. Stuur BASIC_SET = 0x00 als de bewegingsgebeurtenis is gewist"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Send BASIC_SET = 0x00 when motion event is triggered. Send BASIC_SET = 0xFF when motion event is cleared",
-                    "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis wordt geactiveerd. Stuur BASIC_SET = 0xFF als de bewegingsgebeurtenis is gewist"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Send BASIC_SET = 0xFF when motion event is triggered",
-                    "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis wordt geactiveerd"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Send BASIC_SET = 0x00 when motion event is triggered",
-                    "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis wordt geactiveerd"
-                }
-                },
-                {
-                "id": "4",
-                "label": {
-                    "en": "Send BASIC_SET = 0x00 when motion event is cleared",
-                    "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis is gewist"
-                }
-                },
-                {
-                "id": "5",
-                "label": {
-                    "en": "Send BASIC_SET = 0xFF when motion event is cleared",
-                    "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis is gewist"
-                }
-                }
-            ]
-            },
-            {
-            "id": "7",
-            "type": "number",
-            "label": {
-                "en": "Temperature Alarm Value",
-                "nl": "Temperatuur alarm waarde"
-            },
-            "hint": {
-                "en": "This parameter configures the threshold value for the temperature alarm. Range Celsius: -400-850. Range Fahrenheit: -400-1185",
-                "nl": "Deze parameter configureert de drempelwaarde voor het temperatuuralarm. Bereik Celsius: -400-850. Range Fahrenheit: -400-1185"
-            },
-            "zwave": {
-                "index": 7,
-                "size": 2
-            },
-            "attr": {
-                "min": -400,
-                "max": 1185
-            },
-            "value": 239
-            },
-            {
-            "id": "10",
-            "type": "checkbox",
-            "label": {
-                "en": "Disable LED",
-                "nl": "uitschakelen LED"
-            },
-            "hint": {
-                "en": "Disables LED light activation when motion is detected",
-                "nl": "Uitgeschakelde LED-lichtactivering wanneer beweging wordt gedetecteerd"
-            },
-            "zwave": {
-                "index": 10,
-                "size": 1
-            },
-            "value": false
-            },
-            {
-            "id": "11",
-            "type": "dropdown",
-            "label": {
-                "en": "LED Color For Motion Event Report",
-                "nl": "LED-kleur voor bewegingsgebeurtenisrapport"
-            },
-            "hint": {
-                "en": "This parameter defines the colour of the LED light when motion is detected",
-                "nl": "Deze parameter bepaalt de kleur van het LED-lampje wanneer beweging wordt gedetecteerd"
-            },
-            "zwave": {
-                "index": 11,
-                "size": 1
-            },
-            "value": "2",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Disable",
-                    "nl": "Onbruikbaar maken"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Red",
-                    "nl": "Rood"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Green",
-                    "nl": "Groen"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Blue",
-                    "nl": "Blauw"
-                }
-                },
-                {
-                "id": "4",
-                "label": {
-                    "en": "Yellow",
-                    "nl": "Geel"
-                }
-                },
-                {
-                "id": "5",
-                "label": {
-                    "en": "Pink",
-                    "nl": "Roze"
-                }
-                },
-                {
-                "id": "6",
-                "label": {
-                    "en": "Cyan",
-                    "nl": "Cyaan"
-                }
-                },
-                {
-                "id": "7",
-                "label": {
-                    "en": "Purple",
-                    "nl": "Purper"
-                }
-                },
-                {
-                "id": "8",
-                "label": {
-                    "en": "Orange",
-                    "nl": "Oranje"
-                }
-                }
-            ]
-           },
-           {
-            "id": "12",
-            "type": "dropdown",
-            "label": {
-                "en": "LED Color For Temperature Sensor Report",
-                "nl": "LED-kleur voor temperatuursensorrapport"
-            },
-            "hint": {
-                "en": "This parameter defines the colour of the LED light for the temperature sensor",
-                "nl": "Deze parameter definieert de kleur van het LED-licht voor de temperatuursensor"
-            },
-            "zwave": {
-                "index": 12,
-                "size": 1
-            },
-            "value": "0",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Disable",
-                    "nl": "Onbruikbaar maken"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Red",
-                    "nl": "Rood"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Green",
-                    "nl": "Groen"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Blue",
-                    "nl": "Blauw"
-                }
-                },
-                {
-                "id": "4",
-                "label": {
-                    "en": "Yellow",
-                    "nl": "Geel"
-                }
-                },
-                {
-                "id": "5",
-                "label": {
-                    "en": "Pink",
-                    "nl": "Roze"
-                }
-                },
-                {
-                "id": "6",
-                "label": {
-                    "en": "Cyan",
-                    "nl": "Cyaan"
-                }
-                },
-                {
-                "id": "7",
-                "label": {
-                    "en": "Purple",
-                    "nl": "Purper"
-                }
-                },
-                {
-                "id": "8",
-                "label": {
-                    "en": "Orange",
-                    "nl": "Oranje"
-                }
-                }
-            ]
-           },
-           {
-            "id": "13",
-            "type": "dropdown",
-            "label": {
-                "en": "LED Color For Light Sensor Report",
-                "nl": "LED-kleur voor lichtsensorrapport"
-            },
-            "hint": {
-                "en": "This parameter defines the colour of the LED light for the light level",
-                "nl": "Deze parameter definieert de kleur van het LED-licht voor het lichtniveau"
-            },
-            "zwave": {
-                "index": 13,
-                "size": 1
-            },
-            "value": "0",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Disable",
-                    "nl": "Onbruikbaar maken"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Red",
-                    "nl": "Rood"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Green",
-                    "nl": "Groen"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Blue",
-                    "nl": "Blauw"
-                }
-                },
-                {
-                "id": "4",
-                "label": {
-                    "en": "Yellow",
-                    "nl": "Geel"
-                }
-                },
-                {
-                "id": "5",
-                "label": {
-                    "en": "Pink",
-                    "nl": "Roze"
-                }
-                },
-                {
-                "id": "6",
-                "label": {
-                    "en": "Cyan",
-                    "nl": "Cyaan"
-                }
-                },
-                {
-                "id": "7",
-                "label": {
-                    "en": "Purple",
-                    "nl": "Purper"
-                }
-                },
-                {
-                "id": "8",
-                "label": {
-                    "en": "Orange",
-                    "nl": "Oranje"
-                }
-                }
-            ]
-           },
-           {
-            "id": "14",
-            "type": "dropdown",
-            "label": {
-                "en": "LED Color For Battery Report",
-                "nl": "LED-kleur voor batterijrapport"
-            },
-            "hint": {
-                "en": "This parameter defines the colour of the LED light for the battery level",
-                "nl": "Deze parameter bepaalt de kleur van het LED-lampje voor het batterijniveau"
-            },
-            "zwave": {
-                "index": 14,
-                "size": 1
-            },
-            "value": "0",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Disable",
-                    "nl": "Onbruikbaar maken"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Red",
-                    "nl": "Rood"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Green",
-                    "nl": "Groen"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Blue",
-                    "nl": "Blauw"
-                }
-                },
-                {
-                "id": "4",
-                "label": {
-                    "en": "Yellow",
-                    "nl": "Geel"
-                }
-                },
-                {
-                "id": "5",
-                "label": {
-                    "en": "Pink",
-                    "nl": "Roze"
-                }
-                },
-                {
-                "id": "6",
-                "label": {
-                    "en": "Cyan",
-                    "nl": "Cyaan"
-                }
-                },
-                {
-                "id": "7",
-                "label": {
-                    "en": "Purple",
-                    "nl": "Purper"
-                }
-                },
-                {
-                "id": "8",
-                "label": {
-                    "en": "Orange",
-                    "nl": "Oranje"
-                }
-                }
-            ]
-           },
-           {
-            "id": "15",
-            "type": "dropdown",
-            "label": {
-                "en": "LED Color For Wakeup Notification Report",
-                "nl": "LED-kleur voor activeringsrapport"
-            },
-            "hint": {
-                "en": "This parameter defines the colour of the LED light for the wakeup notification",
-                "nl": "Deze parameter bepaalt de kleur van het LED-lampje voor de activeringsmelding"
-            },
-            "zwave": {
-                "index": 15,
-                "size": 1
-            },
-            "value": "0",
-            "values": [
-                {
-                "id": "0",
-                "label": {
-                    "en": "Disable",
-                    "nl": "Onbruikbaar maken"
-                }
-                },
-                {
-                "id": "1",
-                "label": {
-                    "en": "Red",
-                    "nl": "Rood"
-                }
-                },
-                {
-                "id": "2",
-                "label": {
-                    "en": "Green",
-                    "nl": "Groen"
-                }
-                },
-                {
-                "id": "3",
-                "label": {
-                    "en": "Blue",
-                    "nl": "Blauw"
-                }
-                },
-                {
-                "id": "4",
-                "label": {
-                    "en": "Yellow",
-                    "nl": "Geel"
-                }
-                },
-                {
-                "id": "5",
-                "label": {
-                    "en": "Pink",
-                    "nl": "Roze"
-                }
-                },
-                {
-                "id": "6",
-                "label": {
-                    "en": "Cyan",
-                    "nl": "Cyaan"
-                }
-                },
-                {
-                "id": "7",
-                "label": {
-                    "en": "Purple",
-                    "nl": "Purper"
-                }
-                },
-                {
-                 "id": "8",
-                 "label": {
-                    "en": "Orange",
-                    "nl": "Oranje"
-                 }
-                }
-            ]
-           },
-           {
-            "id": "20",
-            "type": "checkbox",
-            "label": {
-                "en": "Temperature Scale Setting",
-                "nl": "Temperatuurschaal instelling"
-            },
-            "hint": {
-                "en": "Configures temperature sensor scale type. Disabled = Celcius. Enabled = Fahrenheit",
-                "nl": "Configureert het schaaltype van de temperatuursensor. Uitgeschakeld = Celcius. Ingeschakeld = Fahrenheit"
-            },
-            "zwave": {
-                "index": 20,
-                "size": 1
-            },
-            "value": false
-           },
-           {
-            "id": "21",
-            "type": "number",
-            "label": {
-                "en": "Temperature Threshold Value to Report",
-                "nl": "Temperatuurdrempelwaarde om te rapporteren"
-            },
-            "hint": {
-                "en": "Change threshold value for change in temperature to induce an automatic report for temperature sensor (unit: Celsius/Fahrenheit).",
-                "nl": "Wijzig de drempelwaarde voor temperatuurverandering om een automatisch rapport voor temperatuursensor te genereren (eenheden: Celsius/Fahrenheit)."
-            },
-            "zwave": {
-                "index": 21,
-                "size": 2
-            },
-            "attr": {
-                "min": 0,
-                "max": 250
-            },
-            "value": 20
-           },
-           {
-            "id": "22",
-            "type": "number",
-            "label": {
-                "en": "Light Intensity Threshold Value to Report",
-                "nl": "Lichtintensiteit Drempelwaarde om te rapporteren"
-            },
-            "hint": {
-                "en": "Change threshold value for change in temperature to induce an automatic report for temperature sensor (unit: Lux).",
-                "nl": "Wijzig de drempelwaarde voor temperatuurverandering om een automatisch rapport voor temperatuursensor te genereren (eenheden: Lux)."
-            },
-            "zwave": {
-                "index": 22,
-                "size": 2
-            },
-            "attr": {
-                "min": 0,
-                "max": 10000
-            },
-            "value": 100
-           },
-           {
-            "id": "23",
-            "type": "number",
-            "label": {
-                "en": "Temperature Sensor Report Interval",
-                "nl": "Interval temperatuursensorrapport"
-            },
-            "hint": {
-                "en": "This parameter is configures the time interval for temperature sensor reporting. Larger values will improve the battery life of the unit (unit: seconds).",
-                "nl": "Deze parameter configureert het tijdsinterval voor rapportage van temperatuursensoren. Grotere waarden zullen de levensduur van de batterij van het apparaat verbeteren s(eenheden: seconden)."
-            },
-            "zwave": {
-                "index": 23,
-                "size": 2
-            },
-            "attr": {
-                "min": 1,
-                "max": 32767
-            },
-            "value": 3600
-           },
-           {
-            "id": "24",
-            "type": "number",
-            "label": {
-                "en": "Light Sensor Report Interval",
-                "nl": "Lichtsensor-rapportinterval"
-            },
-            "hint": {
-                "en": "This parameter is configures the time interval for light sensor reporting. Larger values will improve the battery life of the unit (unit: seconds).",
-                "nl": "Deze parameter configureert het tijdsinterval voor rapportage van lichtsensoren. Grotere waarden zullen de levensduur van de batterij van het apparaat verbeteren (eenheden: seconden)."
-            },
-            "zwave": {
-                "index": 24,
-                "size": 2
-            },
-            "attr": {
-                "min": 1,
-                "max": 32767
-            },
-            "value": 3600
-           },
-           {
-            "id": "30",
-            "type": "number",
-            "label": {
-                "en": "Temperature Offset Value",
-                "nl": "Temperatuur offsetwaarde"
-            },
-            "hint": {
-                "en": "This parameter adjusts the currently measured temperature. Temperature Offset Value = [Value] * 0.1 (unit: Celsius/Fahrenheit).",
-                "nl": "Deze parameter past de momenteel gemeten temperatuur aan. Temperatuurcompensatiewaarde = [Waarde] * 0,1 (eenheid: Celsius / Fahrenheit)."
-            },
-            "zwave": {
-                "index": 30,
-                "size": 2
-            },
-            "attr": {
-                "min": -200,
-                "max": 200
-            },
-            "value": 0
-           },
-           {
-            "id": "31",
-            "type": "number",
-            "label": {
-                "en": "Light Intensity Offset Value",
-                "nl": "Lichtintensiteit verschuivingswaarde"
-            },
-            "hint": {
-                "en": "This parameter adjusts the currently measured light intensity (unit: Lux).",
-                "nl": "Deze parameter past de momenteel gemeten lichtintensiteit aan (eenheid: Lux)."
-            },
-            "zwave": {
-                "index": 31,
-                "size": 2
-            },
-            "attr": {
-                "min": -1000,
-                "max": 1000
-            },
-            "value": 0
-           },
-           {
-            "id": "100",
-            "type": "number",
-            "label": {
-                "en": "Light Sensor Calibrated Coefficient",
-                "nl": "Lichtsensor gekalibreerde coëfficiënt"
-            },
-            "hint": {
-                "en": "This configuration defines the calibrated scale for ambient light intensity. Use Luxmeter to calibrate.\nCalibration formula: ([TriSensorValue] / [LuxmeterValue]) * 1024. Round to nearest whole number. (unit: Lux)",
-                "nl": "Deze configuratie definieert de gekalibreerde schaal voor omgevingslichtintensiteit. Gebruik Luxmeter om te kalibreren.\nKalibratieformule: ([TriSensorwaarde] / [LuxmeterValue]) * 1024. Rond naar het dichtstbijzijnde gehele getal."
-            },
-            "zwave": {
-                "index": 100,
-                "size": 2
-            },
-            "attr": {
-                "min": 1,
-                "max": 32767
-            },
-            "value": 1024
-           }
-       ]
-      },
-      {
-      "id": "DSC-26103ZWEU",
-      "name": {
-        "en": "Micro Switch Gen2"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff"
-      ],
-      "images": {
-        "large": "/drivers/DSC-26103ZWEU/assets/images/large.png",
-        "small": "/drivers/DSC-26103ZWEU/assets/images/small.png"
-      },
-      "zwave": {
-        "manufacturerId": 134,
-        "productTypeId": [
-          3
-        ],
-        "productId": [
-          26
-        ],
-        "zwaveAllianceProductId": 768,
-        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/768",
-        "learnmode": {
-          "instruction": {
-            "en": "Short press the action button on the back of the Micro Switch.",
-            "nl": "Druk kort op de actie knop op de achterkant van de Micro Switch."
-          }
-        },
-        "associationGroups": [
-          1,
-          2
-        ],
-        "defaultConfiguration": [
-          {
-            "id": 80,
-            "size": 1,
-            "value": 2
-          },
-          {
-            "id": 90,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 92,
-            "size": 1,
-            "value": 30
-          },
-          {
-            "id": 101,
-            "size": 4,
-            "value": 15
-          },
-          {
-            "id": 102,
-            "size": 4,
-            "value": 15
-          },
-          {
-            "id": 111,
-            "size": 4,
-            "value": 15
-          }
-        ]
-      },
-      "settings": [
-        {
-          "id": "3",
-          "type": "dropdown",
-          "label": {
-            "en": "Overload Protection",
-            "nl": "Overbelastingsbeveiliging"
-          },
-          "hint": {
-            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
-            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
-          },
-          "zwave": {
-            "index": 3,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "nl": "Uitgeschakeld"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Enabled",
-                "nl": "Geactiveerd"
-              }
-            }
-          ]
-        },
-        {
-          "id": "120",
-          "type": "dropdown",
-          "label": {
-            "en": "Switch type input 1",
-            "nl": "Schakelaar type input 1"
-          },
-          "hint": {
-            "en": "This parameter (120) determines the input device mode for input 1.",
-            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
-          },
-          "zwave": {
-            "index": 120,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "255",
-              "label": {
-                "en": "Automatic",
-                "nl": "Automatisch"
-              }
-            },
-            {
-              "id": "0",
-              "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "3-way switch mode",
-                "nl": "3-way schakel modus"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "DSC-27103ZWEU",
-      "name": {
-        "en": "Micro Dimmer Gen2"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "onoff": {
-          "setOnDim": false
-        }
-      },
-      "images": {
-        "large": "/drivers/DSC-27103ZWEU/assets/images/large.png",
-        "small": "/drivers/DSC-27103ZWEU/assets/images/small.png"
-      },
-      "zwave": {
-        "manufacturerId": 134,
-        "productTypeId": [
-          3
-        ],
-        "productId": [
-          27
-        ],
-        "zwaveAllianceProductId": 765,
-        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/765",
-        "learnmode": {
-          "instruction": {
-            "en": "Short press the action button on the back of the Micro Dimmer.",
-            "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
-          }
-        },
-        "associationGroups": [
-          1,
-          2
-        ],
-        "defaultConfiguration": [
-          {
-            "id": 80,
-            "size": 1,
-            "value": 2
-          },
-          {
-            "id": 90,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 91,
-            "size": 2,
-            "value": 25
-          },
-          {
-            "id": 92,
-            "size": 1,
-            "value": 5
-          },
-          {
-            "id": 101,
-            "size": 4,
-            "value": 15
-          },
-          {
-            "id": 102,
-            "size": 4,
-            "value": 15
-          },
-          {
-            "id": 111,
-            "size": 4,
-            "value": 3
-          }
-        ]
-      },
-      "settings": [
-        {
-          "id": "3",
-          "type": "dropdown",
-          "label": {
-            "en": "Overload Protection",
-            "nl": "Overbelastingsbeveiliging"
-          },
-          "hint": {
-            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
-            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
-          },
-          "zwave": {
-            "index": 3,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "nl": "Uitgeschakeld"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Enabled",
-                "nl": "Geactiveerd"
-              }
-            }
-          ]
-        },
-        {
-          "id": "120",
-          "type": "dropdown",
-          "label": {
-            "en": "Switch type input 1",
-            "nl": "Schakelaar type input 1"
-          },
-          "hint": {
-            "en": "This parameter (120) determines the input device mode for input 1.",
-            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
-          },
-          "zwave": {
-            "index": 120,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "255",
-              "label": {
-                "en": "Automatic",
-                "nl": "Automatisch"
-              }
-            },
-            {
-              "id": "0",
-              "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "3-way switch mode",
-                "nl": "3-way schakel modus"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "DSC18103-ZWEU",
-      "name": {
-        "en": "Micro Smart Switch Gen2"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "measure_power",
-        "meter_power"
-      ],
-      "images": {
-        "large": "/drivers/DSC18103-ZWEU/assets/images/large.png",
-        "small": "/drivers/DSC18103-ZWEU/assets/images/small.png"
-      },
-      "zwave": {
-        "manufacturerId": 134,
-        "productTypeId": [
-          3
-        ],
-        "productId": [
-          18
-        ],
-        "zwaveAllianceProductId": 767,
-        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/767",
-        "learnmode": {
-          "instruction": {
-            "en": "Short press the action button on the back of the Micro Switch.",
-            "nl": "Druk kort op de actie knop op de achterkant van de Micro Switch."
-          }
-        },
-        "associationGroups": [
-          1,
-          2
-        ],
-        "defaultConfiguration": [
-          {
-            "id": 80,
-            "value": 2,
-            "size": 1
-          },
-          {
-            "id": 90,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 91,
-            "size": 2,
-            "value": 25
-          },
-          {
-            "id": 92,
-            "size": 1,
-            "value": 30
-          },
-          {
-            "id": 101,
-            "size": 4,
-            "value": 12
-          },
-          {
-            "id": 111,
-            "size": 4,
-            "value": 15
-          }
-        ]
-      },
-      "settings": [
-        {
-          "id": "3",
-          "type": "dropdown",
-          "label": {
-            "en": "Overload Protection",
-            "nl": "Overbelastingsbeveiliging"
-          },
-          "hint": {
-            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
-            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
-          },
-          "zwave": {
-            "index": 3,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "nl": "Uitgeschakeld"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Enabled",
-                "nl": "Geactiveerd"
-              }
-            }
-          ]
-        },
-        {
-          "id": "91",
-          "type": "number",
-          "label": {
-            "en": "Minimum wattage change needed before an update report is send",
-            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
-          },
-          "hint": {
-            "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
-            "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
-          },
-          "zwave": {
-            "index": 91,
-            "size": 2
-          },
-          "attr": {
-            "min": 0,
-            "max": 32000
-          },
-          "value": 25
-        },
-        {
-          "id": "92",
-          "type": "number",
-          "label": {
-            "en": "Minimum wattage change (%) needed before an update report is send",
-            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
-          },
-          "hint": {
-            "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
-            "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
-          },
-          "zwave": {
-            "index": 92,
-            "size": 2
-          },
-          "attr": {
-            "min": 0,
-            "max": 100
-          },
-          "value": 30
-        },
-        {
-          "id": "120",
-          "type": "dropdown",
-          "label": {
-            "en": "Switch type input 1",
-            "nl": "Schakelaar type input 1"
-          },
-          "hint": {
-            "en": "This parameter (120) determines the input device mode for input 1.",
-            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
-          },
-          "zwave": {
-            "index": 120,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "255",
-              "label": {
-                "en": "Automatic",
-                "nl": "Automatisch"
-              }
-            },
-            {
-              "id": "0",
-              "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "3-way switch mode",
-                "nl": "3-way schakel modus"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "DSC19103-ZWEU",
-      "name": {
-        "en": "Micro Smart Dimmer Gen2"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "measure_power",
-        "meter_power"
-      ],
-      "capabilitiesOptions": {
-        "onoff": {
-          "setOnDim": false
-        }
-      },
-      "images": {
-        "large": "/drivers/DSC19103-ZWEU/assets/images/large.png",
-        "small": "/drivers/DSC19103-ZWEU/assets/images/small.png"
-      },
-      "zwave": {
-        "manufacturerId": 134,
-        "productTypeId": [
-          3
-        ],
-        "productId": [
-          19
-        ],
-        "zwaveAllianceProductId": 766,
-        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/766",
-        "learnmode": {
-          "instruction": {
-            "en": "Short press the action button on the back of the Micro Dimmer.",
-            "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
-          }
-        },
-        "associationGroups": [
-          1,
-          2
-        ],
-        "defaultConfiguration": [
-          {
-            "id": 80,
-            "value": 2,
-            "size": 1
-          },
-          {
-            "id": 90,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 91,
-            "size": 2,
-            "value": 25
-          },
-          {
-            "id": 92,
-            "size": 1,
-            "value": 30
-          },
-          {
-            "id": 101,
-            "size": 4,
-            "value": 12
-          },
-          {
-            "id": 111,
-            "size": 4,
-            "value": 15
-          }
-        ]
-      },
-      "settings": [
-        {
-          "id": "3",
-          "type": "dropdown",
-          "label": {
-            "en": "Overload Protection",
-            "nl": "Overbelastingsbeveiliging"
-          },
-          "hint": {
-            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
-            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
-          },
-          "zwave": {
-            "index": 3,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "nl": "Uitgeschakeld"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Enabled",
-                "nl": "Geactiveerd"
-              }
-            }
-          ]
-        },
-        {
-          "id": "91",
-          "type": "number",
-          "label": {
-            "en": "Minimum wattage change needed before an update report is send",
-            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
-          },
-          "hint": {
-            "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
-            "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
-          },
-          "zwave": {
-            "index": 91,
-            "size": 2
-          },
-          "attr": {
-            "min": 0,
-            "max": 32000
-          },
-          "value": 25
-        },
-        {
-          "id": "92",
-          "type": "number",
-          "label": {
-            "en": "Minimum wattage change (%) needed before an update report is send",
-            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
-          },
-          "hint": {
-            "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
-            "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
-          },
-          "zwave": {
-            "index": 92,
-            "size": 2
-          },
-          "attr": {
-            "min": 0,
-            "max": 100
-          },
-          "value": 30
-        },
-        {
-          "id": "120",
-          "type": "dropdown",
-          "label": {
-            "en": "Switch type input 1",
-            "nl": "Schakelaar type input 1"
-          },
-          "hint": {
-            "en": "This parameter (120) determines the input device mode for input 1.",
-            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
-          },
-          "zwave": {
-            "index": 120,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "255",
-              "label": {
-                "en": "Automatic",
-                "nl": "Automatisch"
-              }
-            },
-            {
-              "id": "0",
-              "label": {
-                "en": "Momentary switch",
-                "nl": "Pulsdruk schakelaar"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "3-way switch mode",
-                "nl": "3-way schakel modus"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "2-state switch mode",
-                "nl": "2-state schakel modus"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "DSC06106-ZWEU",
-      "name": {
-        "en": "Smart Energy Switch"
-      },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "measure_power",
-        "meter_power"
-      ],
-      "images": {
-        "large": "/drivers/DSC06106-ZWEU/assets/images/large.png",
-        "small": "/drivers/DSC06106-ZWEU/assets/images/small.png"
-      },
-      "zwave": {
-        "manufacturerId": 134,
-        "productTypeId": 3,
-        "productId": 6,
-        "learnmode": {
-          "instruction": {
-            "en": "Press the action button on the Smart Switch to enter learn mode",
-            "nl": "Druk op de actie knop op de Smart Switch om de leer modus te activeren"
-          }
-        },
-        "associationGroups": [
-          1,
-          2
-        ],
-        "defaultConfiguration": [
-          {
-            "id": 80,
-            "size": 1,
-            "value": 2
-          },
-          {
-            "id": 90,
-            "size": 1,
-            "value": 1
-          },
-          {
-            "id": 101,
-            "size": 4,
-            "value": 12
-          }
-        ]
-      },
-      "settings": [
-        {
-          "id": 3,
-          "type": "checkbox",
-          "label": {
-            "en": "Current overload protection",
-            "nl": "Bescherming tegen overbelasting"
-          },
-          "zwave": {
-            "index": 3,
-            "size": 1
-          },
-          "value": true,
-          "hint": {
-            "en": "If enabled, the Smart Switch will protect the plugged-in devices against current overload",
-            "nl": "Wanneer ingeschakeld zal de Smart Switch de aangesloten apparaten beschermen tegen overbelasting"
-          }
-        },
-        {
-          "id": 20,
-          "type": "dropdown",
-          "label": {
-            "en": "Configure the output load status after re-power",
-            "nl": "Zet na een stroomonderbreking deze Smart Switch"
-          },
-          "zwave": {
-            "index": 20,
-            "size": 1
-          },
-          "value": "0",
-          "hint": {
-            "en": "When the device has been re-powered, it will set it status as configured",
-            "nl": "Wanneer de Smart Switch zonder stroom heeft gezeten, zal deze automatisch terug worden gezet naar deze status"
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Status before re-power",
-                "nl": "Status voor stroomonderbreking"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Always on",
-                "nl": "Altijd aan"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Always off",
-                "nl": "Altijd uit"
-              }
-            }
-          ]
-        },
-        {
-          "id": 81,
-          "type": "dropdown",
-          "label": {
-            "en": "Configure the behaviour of the LED",
-            "nl": "Stel het gedrag van de LED in"
-          },
-          "hint": {
-            "en": "This parameter changes the behaviour of the LED",
-            "nl": "Deze parameter past het gedrag van de LED aan"
-          },
-          "zwave": {
-            "index": 81,
-            "size": 1
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "LED color follows load",
-                "nl": "LED kleur representeert stroom verbruik"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "LED color follows load for 5 seconds",
-                "nl": "LED kleur representeert stroom verbruik voor 5 seconden"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Night light mode",
-                "nl": "Nacht lamp modus"
-              }
-            }
-          ]
-        },
-        {
-          "id": 91,
-          "type": "number",
-          "label": {
-            "en": "Minimum wattage change needed before an update report is send",
-            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
-          },
-          "zwave": {
-            "index": 91,
-            "size": 2
-          },
-          "value": 25,
-          "attr": {
-            "min": 0,
-            "max": 32000
-          },
-          "hint": {
-            "en": "Minimum change of wattage value needed before value is updated",
-            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
-          }
-        },
-        {
-          "id": 92,
-          "type": "number",
-          "label": {
-            "en": "Minimum wattage change (%) needed before an update report is send",
-            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
-          },
-          "zwave": {
-            "index": 92,
-            "size": 1
-          },
-          "value": 15,
-          "attr": {
-            "min": 0,
-            "max": 100
-          },
-          "hint": {
-            "en": "Minimum change in wattage (%) for a report to be sent.\nRange: 0 - 100",
-            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update.\nBereik: 0 - 100"
-          }
-        },
-        {
-          "id": 102,
-          "type": "dropdown",
-          "label": {
-            "en": "Information reports send to association group 2",
-            "nl": "Informatie updates naar associatie groep 2"
-          },
-          "hint": {
-            "en": "Which information needs to be send to devices in association group 2",
-            "nl": "Welke informatie moet naar apparaten in associatie groep 2 worden gestuurd"
-          },
-          "zwave": {
-            "index": 102,
-            "size": 4
-          },
-          "value": "8",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Nothing",
-                "nl": "Geen"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Voltage (V)",
-                "nl": "Voltage (V)"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Current (A)",
-                "nl": "Current (A)"
-              }
-            },
-            {
-              "id": "4",
-              "label": {
-                "en": "Power (Watt)",
-                "nl": "Vermogen (Watt)"
-              }
-            },
-            {
-              "id": "8",
-              "label": {
-                "en": "Energy (kWh)",
-                "nl": "Energie (kWh)"
-              }
-            },
-            {
-              "id": "12",
-              "label": {
-                "en": "Power (Watt) & Energy (kWh)",
-                "nl": "Vermogen (Watt) & Energie (kWh)"
-              }
-            },
-            {
-              "id": "15",
-              "label": {
-                "en": "Everything",
-                "nl": "Alles"
-              }
-            }
-          ]
-        },
-        {
-          "id": 103,
-          "type": "dropdown",
-          "label": {
-            "en": "Information reports send to association group 3",
-            "nl": "Informatie updates naar associatie groep 3"
-          },
-          "hint": {
-            "en": "Which information needs to be send to devices in association group 3",
-            "nl": "Welke informatie moet naar apparaten in associatie groep 3 worden gestuurd"
-          },
-          "zwave": {
-            "index": 103,
-            "size": 4
-          },
-          "value": "0",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Nothing",
-                "nl": "Geen"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Voltage (V)",
-                "nl": "Voltage (V)"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Current (A)",
-                "nl": "Current (A)"
-              }
-            },
-            {
-              "id": "4",
-              "label": {
-                "en": "Power (Watt)",
-                "nl": "Vermogen (Watt)"
-              }
-            },
-            {
-              "id": "8",
-              "label": {
-                "en": "Energy (kWh)",
-                "nl": "Energie (kWh)"
-              }
-            },
-            {
-              "id": "12",
-              "label": {
-                "en": "Power (Watt) & Energy (kWh)",
-                "nl": "Vermogen (Watt) & Energie (kWh)"
-              }
-            },
-            {
-              "id": "15",
-              "label": {
-                "en": "Everything",
-                "nl": "Alles"
-              }
-            }
-          ]
-        },
-        {
-          "id": 111,
-          "type": "number",
-          "label": {
-            "en": "Reporting interval association group 1",
-            "nl": "Informatie update interval associatie groep 1"
-          },
-          "hint": {
-            "en": "This parameter indicates how often the Smart Switch should send an update with new information to Homey",
-            "nl": "Deze parameter geeft aan hoe vaak de Smart Switch een update met nieuwe informatie naar Homey"
-          },
-          "attr": {
-            "min": 0,
-            "max": 268435456
-          },
-          "zwave": {
-            "index": 111,
-            "size": 4
-          },
-          "value": 30
-        },
-        {
-          "id": 112,
-          "type": "number",
-          "label": {
-            "en": "Reporting interval association group 2",
-            "nl": "Informatie update interval associatie groep 2"
-          },
-          "hint": {
-            "en": "This parameter indicates how often the Smart Switch should send an update with new information to devices in association group 2",
-            "nl": "Deze parameter geeft aan hoe vaak de Smart Switch een update met nieuwe informatie naar apparaten in de tweede associatie group zou moeten sturen"
-          },
-          "attr": {
-            "min": 0,
-            "max": 65535
-          },
-          "zwave": {
-            "index": 112,
-            "size": 4
-          },
-          "value": 600
-        },
-        {
-          "id": 113,
-          "type": "number",
-          "label": {
-            "en": "Reporting interval association group 3",
-            "nl": "Informatie update interval associatie groep 3"
-          },
-          "hint": {
-            "en": "This parameter indicates how often the Smart Switch should send an update with new information to devices in association group 3",
-            "nl": "Deze parameter geeft aan hoe vaak de Smart Switch een update met nieuwe informatie naar apparaten in de derde associatie group zou moeten sturen"
-          },
-          "attr": {
-            "min": 1,
-            "max": 268435456
-          },
-          "zwave": {
-            "index": 113,
-            "size": 4
-          },
-          "value": 600
-        }
-      ]
-    },
     {
       "id": "DSA38",
       "name": {
@@ -3872,6 +1257,1095 @@
               "label": {
                 "en": "Water detect and battery",
                 "nl": "Water detectie and batterij"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSC-26103ZWEU",
+      "name": {
+        "en": "Micro Switch Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/DSC-26103ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC-26103ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          26
+        ],
+        "zwaveAllianceProductId": 768,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/768",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Switch.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Switch."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 102,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSC-27103ZWEU",
+      "name": {
+        "en": "Micro Dimmer Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "images": {
+        "large": "/drivers/DSC-27103ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC-27103ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          27
+        ],
+        "zwaveAllianceProductId": 765,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/765",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Dimmer.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 5
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 102,
+            "size": 4,
+            "value": 15
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 3
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSC06106-ZWEU",
+      "name": {
+        "en": "Smart Energy Switch"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff",
+        "measure_power",
+        "meter_power"
+      ],
+      "images": {
+        "large": "/drivers/DSC06106-ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC06106-ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": 3,
+        "productId": 6,
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Smart Switch to enter learn mode",
+            "nl": "Druk op de actie knop op de Smart Switch om de leer modus te activeren"
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": 3,
+          "type": "checkbox",
+          "label": {
+            "en": "Current overload protection",
+            "nl": "Bescherming tegen overbelasting"
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": true,
+          "hint": {
+            "en": "If enabled, the Smart Switch will protect the plugged-in devices against current overload",
+            "nl": "Wanneer ingeschakeld zal de Smart Switch de aangesloten apparaten beschermen tegen overbelasting"
+          }
+        },
+        {
+          "id": 20,
+          "type": "dropdown",
+          "label": {
+            "en": "Configure the output load status after re-power",
+            "nl": "Zet na een stroomonderbreking deze Smart Switch"
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "hint": {
+            "en": "When the device has been re-powered, it will set it status as configured",
+            "nl": "Wanneer de Smart Switch zonder stroom heeft gezeten, zal deze automatisch terug worden gezet naar deze status"
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Status before re-power",
+                "nl": "Status voor stroomonderbreking"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": 81,
+          "type": "dropdown",
+          "label": {
+            "en": "Configure the behaviour of the LED",
+            "nl": "Stel het gedrag van de LED in"
+          },
+          "hint": {
+            "en": "This parameter changes the behaviour of the LED",
+            "nl": "Deze parameter past het gedrag van de LED aan"
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "LED color follows load",
+                "nl": "LED kleur representeert stroom verbruik"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "LED color follows load for 5 seconds",
+                "nl": "LED kleur representeert stroom verbruik voor 5 seconden"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Night light mode",
+                "nl": "Nacht lamp modus"
+              }
+            }
+          ]
+        },
+        {
+          "id": 91,
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change needed before an update report is send",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "value": 25,
+          "attr": {
+            "min": 0,
+            "max": 32000
+          },
+          "hint": {
+            "en": "Minimum change of wattage value needed before value is updated",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          }
+        },
+        {
+          "id": 92,
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change (%) needed before an update report is send",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+          },
+          "zwave": {
+            "index": 92,
+            "size": 1
+          },
+          "value": 15,
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "hint": {
+            "en": "Minimum change in wattage (%) for a report to be sent.\nRange: 0 - 100",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update.\nBereik: 0 - 100"
+          }
+        },
+        {
+          "id": 102,
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 2",
+            "nl": "Informatie updates naar associatie groep 2"
+          },
+          "hint": {
+            "en": "Which information needs to be send to devices in association group 2",
+            "nl": "Welke informatie moet naar apparaten in associatie groep 2 worden gestuurd"
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": "8",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Voltage (V)",
+                "nl": "Voltage (V)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Current (A)",
+                "nl": "Current (A)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Power (Watt)",
+                "nl": "Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Energy (kWh)",
+                "nl": "Energie (kWh)"
+              }
+            },
+            {
+              "id": "12",
+              "label": {
+                "en": "Power (Watt) & Energy (kWh)",
+                "nl": "Vermogen (Watt) & Energie (kWh)"
+              }
+            },
+            {
+              "id": "15",
+              "label": {
+                "en": "Everything",
+                "nl": "Alles"
+              }
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 3",
+            "nl": "Informatie updates naar associatie groep 3"
+          },
+          "hint": {
+            "en": "Which information needs to be send to devices in association group 3",
+            "nl": "Welke informatie moet naar apparaten in associatie groep 3 worden gestuurd"
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Voltage (V)",
+                "nl": "Voltage (V)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Current (A)",
+                "nl": "Current (A)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Power (Watt)",
+                "nl": "Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Energy (kWh)",
+                "nl": "Energie (kWh)"
+              }
+            },
+            {
+              "id": "12",
+              "label": {
+                "en": "Power (Watt) & Energy (kWh)",
+                "nl": "Vermogen (Watt) & Energie (kWh)"
+              }
+            },
+            {
+              "id": "15",
+              "label": {
+                "en": "Everything",
+                "nl": "Alles"
+              }
+            }
+          ]
+        },
+        {
+          "id": 111,
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 1",
+            "nl": "Informatie update interval associatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter indicates how often the Smart Switch should send an update with new information to Homey",
+            "nl": "Deze parameter geeft aan hoe vaak de Smart Switch een update met nieuwe informatie naar Homey"
+          },
+          "attr": {
+            "min": 0,
+            "max": 268435456
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "value": 30
+        },
+        {
+          "id": 112,
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 2",
+            "nl": "Informatie update interval associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter indicates how often the Smart Switch should send an update with new information to devices in association group 2",
+            "nl": "Deze parameter geeft aan hoe vaak de Smart Switch een update met nieuwe informatie naar apparaten in de tweede associatie group zou moeten sturen"
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "value": 600
+        },
+        {
+          "id": 113,
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 3",
+            "nl": "Informatie update interval associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter indicates how often the Smart Switch should send an update with new information to devices in association group 3",
+            "nl": "Deze parameter geeft aan hoe vaak de Smart Switch een update met nieuwe informatie naar apparaten in de derde associatie group zou moeten sturen"
+          },
+          "attr": {
+            "min": 1,
+            "max": 268435456
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "value": 600
+        }
+      ]
+    },
+    {
+      "id": "DSC18103-ZWEU",
+      "name": {
+        "en": "Micro Smart Switch Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "measure_power",
+        "meter_power"
+      ],
+      "images": {
+        "large": "/drivers/DSC18103-ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC18103-ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          18
+        ],
+        "zwaveAllianceProductId": 767,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/767",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Switch.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Switch."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change needed before an update report is send",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
+            "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32000
+          },
+          "value": 25
+        },
+        {
+          "id": "92",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change (%) needed before an update report is send",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
+            "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
+          },
+          "zwave": {
+            "index": 92,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 30
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DSC19103-ZWEU",
+      "name": {
+        "en": "Micro Smart Dimmer Gen2"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "measure_power",
+        "meter_power"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "images": {
+        "large": "/drivers/DSC19103-ZWEU/assets/images/large.png",
+        "small": "/drivers/DSC19103-ZWEU/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          19
+        ],
+        "zwaveAllianceProductId": 766,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/products/766",
+        "learnmode": {
+          "instruction": {
+            "en": "Short press the action button on the back of the Micro Dimmer.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Micro Dimmer."
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "value": 2,
+            "size": 1
+          },
+          {
+            "id": 90,
+            "size": 1,
+            "value": 1
+          },
+          {
+            "id": 91,
+            "size": 2,
+            "value": 25
+          },
+          {
+            "id": 92,
+            "size": 1,
+            "value": 30
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 12
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 15
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Overload Protection",
+            "nl": "Overbelastingsbeveiliging"
+          },
+          "hint": {
+            "en": "This parameter (3) determines if the device should close when the load is more than 2.7A during 2 minutes.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat moet sluiten als de belasting meer dan 2.7 A is gedurende 2 minuten."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled",
+                "nl": "Geactiveerd"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change needed before an update report is send",
+            "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (91) determines the minimum value change before a report is being send to Homey.",
+            "nl": "Deze parameter (91) bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 91,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32000
+          },
+          "value": 25
+        },
+        {
+          "id": "92",
+          "type": "number",
+          "label": {
+            "en": "Minimum wattage change (%) needed before an update report is send",
+            "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+          },
+          "hint": {
+            "en": "This parameter (92) determines the minimum percentage change before a report is being send to Homey.",
+            "nl": "Deze parameter (92) bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey"
+          },
+          "zwave": {
+            "index": 92,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 30
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Switch type input 1",
+            "nl": "Schakelaar type input 1"
+          },
+          "hint": {
+            "en": "This parameter (120) determines the input device mode for input 1.",
+            "nl": "Deze parameter (120) bepaalt de modus voor het invoer apparaat verbonden aan ingang 1."
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "255",
+              "label": {
+                "en": "Automatic",
+                "nl": "Automatisch"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Momentary switch",
+                "nl": "Pulsdruk schakelaar"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3-way switch mode",
+                "nl": "3-way schakel modus"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode",
+                "nl": "2-state schakel modus"
               }
             }
           ]
@@ -5816,6 +4290,408 @@
             "size": 1
           },
           "value": true
+        }
+      ]
+    },
+    {
+      "id": "ZW095-3C",
+      "name": {
+        "en": "Home Energy Meter Gen5 - 3 phase"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_current",
+        "measure_power",
+        "meter_power",
+        "measure_voltage"
+      ],
+      "images": {
+        "large": "/drivers/ZW095-3C/assets/images/large.png",
+        "small": "/drivers/ZW095-3C/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          95
+        ],
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Home Energy Meter Gen5 - 3 phase",
+            "nl": "Druk op de actie knop op de Home Energy Meter Gen5 - 3 phase"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "multiChannelNodes": {
+          "1": {
+            "class": "sensor",
+            "capabilities": [
+              "measure_power",
+              "meter_power",
+              "measure_voltage",
+              "measure_current"
+            ],
+            "name": {
+              "en": "Clamp 01"
+            },
+            "icon": "/drivers/ZW095-3C/assets/assets/icon.svg",
+            "settings": []
+          },
+          "2": {
+            "class": "sensor",
+            "capabilities": [
+              "measure_power",
+              "meter_power",
+              "measure_voltage",
+              "measure_current"
+            ],
+            "name": {
+              "en": "Clamp 02"
+            },
+            "icon": "/drivers/ZW095-3C/assets/assets/icon.svg",
+            "settings": []
+          },
+          "3": {
+            "class": "sensor",
+            "capabilities": [
+              "measure_power",
+              "meter_power",
+              "measure_voltage",
+              "measure_current"
+            ],
+            "name": {
+              "en": "Clamp 03"
+            },
+            "icon": "/drivers/ZW095-3C/assets/assets/icon.svg",
+            "settings": []
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "2",
+          "type": "dropdown",
+          "label": {
+            "en": "Energy detection mode",
+            "nl": "Detectie modus voor stroom"
+          },
+          "hint": {
+            "en": "This parameter (2) determines the energy detection mode for the reports of parameter 103 and 104.",
+            "nl": "Deze parameter (2) bepaalt de detectie modus voor de rapportages van parameter 103 en 104."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Report power, report the absolute value of energy."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Report positive/negative power, report the algebraic sum of energy."
+              }
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "value": true,
+          "label": {
+            "en": "Enable/disable selective reporting only when power change reaches a certain threshold or percentage"
+          },
+          "hint": {
+            "en": "This parameter (3) determines whether or not to limit reporting power changes to only report when the change is above the threshold.",
+            "nl": "Deze parameter (3) bepaalt of het apparaat alleen rapporteerd als de verandering groter is dan de ingestelde drempel."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "4",
+          "type": "number",
+          "label": {
+            "en": "Wattage threshold for automatic reporting",
+            "nl": "Wattage drempel voor automatische rapportage"
+          },
+          "hint": {
+            "en": "This parameter (4) determines the threshold change in wattage before an automatic report is send to Homey.",
+            "nl": "Deze parameter (4) bepaalt de drempel voor wattage veranderingen voordat er automatisch een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 60000
+          },
+          "value": 50
+        },
+        {
+          "id": "5",
+          "type": "number",
+          "label": {
+            "en": "Wattage threshold for automatic reporting, Clamp 1",
+            "nl": "Wattage drempel voor automatische rapportage, Clamp 1"
+          },
+          "hint": {
+            "en": "This parameter (5) determines the threshold change in wattage on Clamp 1 before an automatic report is send to Homey.",
+            "nl": "Deze parameter (5) bepaalt de drempel voor wattage veranderingen op Clamp 1 voordat er automatisch een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 60000
+          },
+          "value": 50
+        },
+        {
+          "id": "6",
+          "type": "number",
+          "label": {
+            "en": "Wattage threshold for automatic reporting, Clamp 2",
+            "nl": "Wattage drempel voor automatische rapportage, Clamp 2"
+          },
+          "hint": {
+            "en": "This parameter (6) determines the threshold change in wattage on Clamp 2 before an automatic report is send to Homey.",
+            "nl": "Deze parameter (6) bepaalt de drempel voor wattage veranderingen op Clamp 2 voordat er automatisch een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 60000
+          },
+          "value": 50
+        },
+        {
+          "id": "7",
+          "type": "number",
+          "label": {
+            "en": "Wattage threshold for automatic reporting, Clamp 3",
+            "nl": "Wattage drempel voor automatische rapportage, Clamp 3"
+          },
+          "hint": {
+            "en": "This parameter (7) determines the threshold change in wattage on Clamp 3 before an automatic report is send to Homey.",
+            "nl": "Deze parameter (7) bepaalt de drempel voor wattage veranderingen op Clamp 3 voordat er automatisch een rapport wordt verzonden naar Homey."
+          },
+          "zwave": {
+            "index": 7,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 60000
+          },
+          "value": 50
+        },
+        {
+          "id": "8",
+          "type": "number",
+          "label": {
+            "en": "Percentage wattage threshold for automatic reporting",
+            "nl": "Wattage drempel in procenten voor automatische rapportage"
+          },
+          "hint": {
+            "en": "This parameter (8) determines the percentage threshold for wattage changes to trigger an automatic report.",
+            "nl": "Deze parameter (8) bepaalt de minimale verandering in procenten van het wattage voorat er een automatisch rapport wordt verzonden."
+          },
+          "zwave": {
+            "index": 8,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 80
+        },
+        {
+          "id": "9",
+          "type": "number",
+          "label": {
+            "en": "Percentage wattage threshold for automatic reporting, Clamp 1",
+            "nl": "Wattage drempel in procenten voor automatische rapportage, Clamp 1"
+          },
+          "hint": {
+            "en": "This parameter (9) determines the percentage threshold for wattage on Clamp 1 changes to trigger an automatic report.",
+            "nl": "Deze parameter (9) bepaalt de minimale verandering in procenten van het wattage op Clamp 1 voordat er een automatisch rapport wordt verzonden."
+          },
+          "zwave": {
+            "index": 9,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 80
+        },
+        {
+          "id": "10",
+          "type": "number",
+          "label": {
+            "en": "Percentage wattage threshold for automatic reporting, Clamp 2",
+            "nl": "Wattage drempel in procenten voor automatische rapportage, Clamp 2"
+          },
+          "hint": {
+            "en": "This parameter (10) determines the percentage threshold for wattage on Clamp 2 changes to trigger an automatic report.",
+            "nl": "Deze parameter (10) bepaalt de minimale verandering in procenten van het wattage op Clamp 2 voordat er een automatisch rapport wordt verzonden."
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 80
+        },
+        {
+          "id": "11",
+          "type": "number",
+          "label": {
+            "en": "Percentage wattage threshold for automatic reporting, Clamp 3",
+            "nl": "Wattage drempel in procenten voor automatische rapportage, Clamp 3"
+          },
+          "hint": {
+            "en": "This parameter (11) determines the percentage threshold for wattage on Clamp 3 changes to trigger an automatic report.",
+            "nl": "Deze parameter (11) bepaalt de minimale verandering in procenten van het wattage op Clamp 3 voordat er een automatisch rapport wordt verzonden."
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "value": 80
+        },
+        {
+          "id": "101",
+          "type": "number",
+          "label": {
+            "en": "Association group 1 report type",
+            "nl": "Rapport type associatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter (101) determines the type of reports sent to devices in the 1st association group.",
+            "nl": "Deze parameter (101) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e associatie groep."
+          },
+          "zwave": {
+            "index": 101,
+            "size": 4
+          },
+          "value": 2
+        },
+        {
+          "id": "102",
+          "type": "number",
+          "label": {
+            "en": "Association group 2 report type",
+            "nl": "Rapport type associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (102) determines the type of reports sent to devices in the 2nd association group.",
+            "nl": "Deze parameter (102) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "value": 12
+        },
+        {
+          "id": "103",
+          "type": "number",
+          "label": {
+            "en": "Association group 3 report type",
+            "nl": "Rapport type associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (103) determines the type of reports sent to devices in the 3rd association group.",
+            "nl": "Deze parameter (103) bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "value": 1
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Report interval association group 1",
+            "nl": "Rapportage interval associatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval for sending report to devices in association group 1.",
+            "nl": "Deze parameter (111) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste associatie groep."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "value": 300
+        },
+        {
+          "id": "112",
+          "type": "number",
+          "label": {
+            "en": "Report interval association group 2",
+            "nl": "Rapportage interval associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the interval for sending report to devices in association group 2.",
+            "nl": "Deze parameter (112) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e associatie groep."
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "value": 300
+        },
+        {
+          "id": "113",
+          "type": "number",
+          "label": {
+            "en": "Report interval association group 3",
+            "nl": "Rapportage interval associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter (113) determines the interval for sending report to devices in association group 3.",
+            "nl": "Deze parameter (113) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e associatie groep."
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "value": 300
         }
       ]
     },
@@ -10675,6 +9551,198 @@
       ]
     },
     {
+      "id": "ZW141",
+      "name": {
+        "en": "Nano Shutter (ZW141)"
+      },
+      "class": "other",
+      "capabilities": [
+        "windowcoverings_state"
+      ],
+      "images": {
+        "large": "/drivers/ZW141/assets/images/large.png",
+        "small": "/drivers/ZW141/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          141
+        ],
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the back of the Nano Shutter (ZW141)"
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ]
+      },
+      "settings": [
+        {
+          "id": "35",
+          "type": "number",
+          "label": {
+            "en": "Set the moving time from up (left) to down (right) for curtain"
+          },
+          "zwave": {
+            "index": 35,
+            "size": 1
+          },
+          "value": 30
+        },
+        {
+          "id": "80",
+          "type": "dropdown",
+          "label": {
+            "en": "To set which report would be sent to the associated nodes in association group 1 when the state of output load is changed"
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Basic Report CC"
+              }
+            }
+          ]
+        },
+        {
+          "id": "85",
+          "type": "dropdown",
+          "label": {
+            "en": "Set the operation mode of external switch"
+          },
+          "zwave": {
+            "index": 85,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Operation Mode 1"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Operation Mode 2"
+              }
+            }
+          ]
+        },
+        {
+          "id": "120",
+          "type": "dropdown",
+          "label": {
+            "en": "Set the external switch mode of S1"
+          },
+          "hint": {
+            "en": "When the switch mode of S1 is determined or identified or configured, this mode value will not be reset after exclusion"
+          },
+          "zwave": {
+            "index": 120,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Unidentified mode"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3 way switch mode"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Push button mode"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Enter automatic identification mode (The blue Led will fast blink)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "121",
+          "type": "dropdown",
+          "label": {
+            "en": "Set the external switch mode of S2"
+          },
+          "hint": {
+            "en": "When the switch mode of S2 is determined or identified or configured, this mode value will not be reset after exclusion"
+          },
+          "zwave": {
+            "index": 121,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Unidentified mode"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "2-state switch mode"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "3 way switch mode"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Push button mode"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Enter automatic identification mode (The blue Led will fast blink)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "ZW164-C",
       "name": {
         "en": "Indoor Siren 6"
@@ -10791,6 +9859,939 @@
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "ZWA005",
+      "name": {
+        "en": "TriSensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance"
+      ],
+      "images": {
+        "large": "/drivers/ZWA005/assets/images/large.png",
+        "small": "/drivers/ZWA005/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": 2,
+        "productId": 5,
+        "zwaveAllianceProductId": 2898,
+        "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2898/TriSensor%20user%20manual%2020180416.pdf",
+        "learnmode": {
+          "image": "/drivers/ZWA005/assets/learnmode.svg",
+          "instruction": {
+            "en": "To include or remove: press the Action Button on the TriSensor",
+            "nl": "Om op te nemen: druk op de actieknop op TriSensor."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "This is the lifeline, it is not recommended to remove Homey's id from this association group.",
+              "nl": "Dit is de levenslijn, het is niet aangeraden om Homey's zijn id te verwijderen uit deze associatie groep."
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 4,
+            "value": 1,
+            "size": 1
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "1",
+          "type": "number",
+          "label": {
+            "en": "Motion Retrigger Time",
+            "nl": "Bewegingsrempeltijd"
+          },
+          "hint": {
+            "en": "This parameter configures the delay time before the motion sensor can be triggered again.\nValue = 0 will disable motion sensor from triggering until motion timeout has finished (unit: seconds).",
+            "nl": "Deze parameter configureert de vertragingstijd voordat de bewegingssensor opnieuw kan worden geactiveerd.\nWaarde = 0 schakelt de bewegingssensor uit tot de beweging timeout is voltooid (eenheden: seconden)."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 32767
+          },
+          "value": 30
+        },
+        {
+          "id": "2",
+          "type": "number",
+          "label": {
+            "en": "Motion Timeout",
+            "nl": "Motion Time-out"
+          },
+          "hint": {
+            "en": "This parameter configures the time to clear a motion event in seconds",
+            "nl": "Deze parameter configureert de tijd om een bewegingsgebeurtenis in seconden te wissen"
+          },
+          "zwave": {
+            "index": 2,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "value": 240
+        },
+        {
+          "id": "3",
+          "type": "dropdown",
+          "label": {
+            "en": "Motion Sensitivity",
+            "nl": "Bewegingsgevoeligheid"
+          },
+          "hint": {
+            "en": "Value = 0 will disable the PIR/motion sensor",
+            "nl": "Waarde = 0 schakelt de PIR/bewegingssensor uit"
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "value": "11",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Off",
+                "nl": "Uit"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Level 1 (minimum)",
+                "nl": "Level 1 (minimum)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Level 2",
+                "nl": "Level 2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Level 3",
+                "nl": "Level 3"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Level 4",
+                "nl": "Level 4"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Level 5",
+                "nl": "Level 5"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Level 6",
+                "nl": "Level 6"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Level 7",
+                "nl": "Level 7"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Level 8",
+                "nl": "Level 8"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "Level 9",
+                "nl": "Level 9"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "Level 10",
+                "nl": "Level 10"
+              }
+            },
+            {
+              "id": "11",
+              "label": {
+                "en": "Level 11 (maximum)",
+                "nl": "Level 11 (maximum)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "type": "checkbox",
+          "label": {
+            "en": "Binary Sensor Report Enable",
+            "nl": "Binaire sensorrapport inschakelen"
+          },
+          "hint": {
+            "en": "Disables/Enables binary report when motion event is detected or cleared",
+            "nl": "Schakelt binair rapport in/uit wanneer bewegingsgebeurtenis wordt gedetecteerd of gewist"
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "5",
+          "type": "dropdown",
+          "label": {
+            "en": "BASIC_SET to associated nodes.",
+            "nl": "BASIC_SET naar geassocieerde knooppunten"
+          },
+          "hint": {
+            "en": "This parameter configures send BASIC_SET command to nodes that are associated in group 2 and group 3.",
+            "nl": "Deze parameter wordt de opdracht BASIC_SET verzenden geconfigureerd naar knooppunten die zijn gekoppeld aan groep 2 en groep 3."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "value": "3",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable All Group Basic Set Command",
+                "nl": "Alle groepsbasissetopdracht uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enable Group 2 Basic Set Command, Group 3 Basic Set Command is disabled",
+                "nl": "Ingeschakeld groep 2 basisset commando, groep 3 basisset commando is uitgeschakeld"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Enable Group 3 Basic Set Command, Group 2 Basic Set Command is disabled",
+                "nl": "Ingeschakeld groep 3 basisset commando, groep 2 basisset commando is uitgeschakeld"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Enable Group 2 and Group 3 Basic Set Command",
+                "nl": "Ingeschakeld commando voor groep 2 en groep 3 basisset"
+              }
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "type": "dropdown",
+          "label": {
+            "en": "BASIC_SET Value Settings for Group 2",
+            "nl": "BASIC_SET waarde-instellingen voor Groep 2"
+          },
+          "hint": {
+            "en": "This parameter configures send BASIC_SET command to nodes that are associated in group 2 and group 3.",
+            "nl": "Deze parameter wordt de opdracht BASIC_SET verzenden geconfigureerd naar knooppunten die zijn gekoppeld aan groep 2 en groep 3."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Send BASIC_SET = 0xFF when motion event is triggered. Send BASIC_SET = 0x00 when motion event is cleared",
+                "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis wordt geactiveerd. Stuur BASIC_SET = 0x00 als de bewegingsgebeurtenis is gewist"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send BASIC_SET = 0x00 when motion event is triggered. Send BASIC_SET = 0xFF when motion event is cleared",
+                "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis wordt geactiveerd. Stuur BASIC_SET = 0xFF als de bewegingsgebeurtenis is gewist"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Send BASIC_SET = 0xFF when motion event is triggered",
+                "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis wordt geactiveerd"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Send BASIC_SET = 0x00 when motion event is triggered",
+                "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis wordt geactiveerd"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send BASIC_SET = 0x00 when motion event is cleared",
+                "nl": "Stuur BASIC_SET = 0x00 wanneer bewegingsgebeurtenis is gewist"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send BASIC_SET = 0xFF when motion event is cleared",
+                "nl": "Stuur BASIC_SET = 0xFF wanneer bewegingsgebeurtenis is gewist"
+              }
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "type": "number",
+          "label": {
+            "en": "Temperature Alarm Value",
+            "nl": "Temperatuur alarm waarde"
+          },
+          "hint": {
+            "en": "This parameter configures the threshold value for the temperature alarm. Range Celsius: -400-850. Range Fahrenheit: -400-1185",
+            "nl": "Deze parameter configureert de drempelwaarde voor het temperatuuralarm. Bereik Celsius: -400-850. Range Fahrenheit: -400-1185"
+          },
+          "zwave": {
+            "index": 7,
+            "size": 2
+          },
+          "attr": {
+            "min": -400,
+            "max": 1185
+          },
+          "value": 239
+        },
+        {
+          "id": "10",
+          "type": "checkbox",
+          "label": {
+            "en": "Disable LED",
+            "nl": "uitschakelen LED"
+          },
+          "hint": {
+            "en": "Disables LED light activation when motion is detected",
+            "nl": "Uitgeschakelde LED-lichtactivering wanneer beweging wordt gedetecteerd"
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "11",
+          "type": "dropdown",
+          "label": {
+            "en": "LED Color For Motion Event Report",
+            "nl": "LED-kleur voor bewegingsgebeurtenisrapport"
+          },
+          "hint": {
+            "en": "This parameter defines the colour of the LED light when motion is detected",
+            "nl": "Deze parameter bepaalt de kleur van het LED-lampje wanneer beweging wordt gedetecteerd"
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "value": "2",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable",
+                "nl": "Onbruikbaar maken"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Pink",
+                "nl": "Roze"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Purple",
+                "nl": "Purper"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Orange",
+                "nl": "Oranje"
+              }
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "type": "dropdown",
+          "label": {
+            "en": "LED Color For Temperature Sensor Report",
+            "nl": "LED-kleur voor temperatuursensorrapport"
+          },
+          "hint": {
+            "en": "This parameter defines the colour of the LED light for the temperature sensor",
+            "nl": "Deze parameter definieert de kleur van het LED-licht voor de temperatuursensor"
+          },
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable",
+                "nl": "Onbruikbaar maken"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Pink",
+                "nl": "Roze"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Purple",
+                "nl": "Purper"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Orange",
+                "nl": "Oranje"
+              }
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "type": "dropdown",
+          "label": {
+            "en": "LED Color For Light Sensor Report",
+            "nl": "LED-kleur voor lichtsensorrapport"
+          },
+          "hint": {
+            "en": "This parameter defines the colour of the LED light for the light level",
+            "nl": "Deze parameter definieert de kleur van het LED-licht voor het lichtniveau"
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable",
+                "nl": "Onbruikbaar maken"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Pink",
+                "nl": "Roze"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Purple",
+                "nl": "Purper"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Orange",
+                "nl": "Oranje"
+              }
+            }
+          ]
+        },
+        {
+          "id": "14",
+          "type": "dropdown",
+          "label": {
+            "en": "LED Color For Battery Report",
+            "nl": "LED-kleur voor batterijrapport"
+          },
+          "hint": {
+            "en": "This parameter defines the colour of the LED light for the battery level",
+            "nl": "Deze parameter bepaalt de kleur van het LED-lampje voor het batterijniveau"
+          },
+          "zwave": {
+            "index": 14,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable",
+                "nl": "Onbruikbaar maken"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Pink",
+                "nl": "Roze"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Purple",
+                "nl": "Purper"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Orange",
+                "nl": "Oranje"
+              }
+            }
+          ]
+        },
+        {
+          "id": "15",
+          "type": "dropdown",
+          "label": {
+            "en": "LED Color For Wakeup Notification Report",
+            "nl": "LED-kleur voor activeringsrapport"
+          },
+          "hint": {
+            "en": "This parameter defines the colour of the LED light for the wakeup notification",
+            "nl": "Deze parameter bepaalt de kleur van het LED-lampje voor de activeringsmelding"
+          },
+          "zwave": {
+            "index": 15,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable",
+                "nl": "Onbruikbaar maken"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Red",
+                "nl": "Rood"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Green",
+                "nl": "Groen"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Blue",
+                "nl": "Blauw"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Yellow",
+                "nl": "Geel"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Pink",
+                "nl": "Roze"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Cyan",
+                "nl": "Cyaan"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Purple",
+                "nl": "Purper"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Orange",
+                "nl": "Oranje"
+              }
+            }
+          ]
+        },
+        {
+          "id": "20",
+          "type": "checkbox",
+          "label": {
+            "en": "Temperature Scale Setting",
+            "nl": "Temperatuurschaal instelling"
+          },
+          "hint": {
+            "en": "Configures temperature sensor scale type. Disabled = Celcius. Enabled = Fahrenheit",
+            "nl": "Configureert het schaaltype van de temperatuursensor. Uitgeschakeld = Celcius. Ingeschakeld = Fahrenheit"
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "21",
+          "type": "number",
+          "label": {
+            "en": "Temperature Threshold Value to Report",
+            "nl": "Temperatuurdrempelwaarde om te rapporteren"
+          },
+          "hint": {
+            "en": "Change threshold value for change in temperature to induce an automatic report for temperature sensor (unit: Celsius/Fahrenheit).",
+            "nl": "Wijzig de drempelwaarde voor temperatuurverandering om een automatisch rapport voor temperatuursensor te genereren (eenheden: Celsius/Fahrenheit)."
+          },
+          "zwave": {
+            "index": 21,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 250
+          },
+          "value": 20
+        },
+        {
+          "id": "22",
+          "type": "number",
+          "label": {
+            "en": "Light Intensity Threshold Value to Report",
+            "nl": "Lichtintensiteit Drempelwaarde om te rapporteren"
+          },
+          "hint": {
+            "en": "Change threshold value for change in temperature to induce an automatic report for temperature sensor (unit: Lux).",
+            "nl": "Wijzig de drempelwaarde voor temperatuurverandering om een automatisch rapport voor temperatuursensor te genereren (eenheden: Lux)."
+          },
+          "zwave": {
+            "index": 22,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 10000
+          },
+          "value": 100
+        },
+        {
+          "id": "23",
+          "type": "number",
+          "label": {
+            "en": "Temperature Sensor Report Interval",
+            "nl": "Interval temperatuursensorrapport"
+          },
+          "hint": {
+            "en": "This parameter is configures the time interval for temperature sensor reporting. Larger values will improve the battery life of the unit (unit: seconds).",
+            "nl": "Deze parameter configureert het tijdsinterval voor rapportage van temperatuursensoren. Grotere waarden zullen de levensduur van de batterij van het apparaat verbeteren s(eenheden: seconden)."
+          },
+          "zwave": {
+            "index": 23,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "value": 3600
+        },
+        {
+          "id": "24",
+          "type": "number",
+          "label": {
+            "en": "Light Sensor Report Interval",
+            "nl": "Lichtsensor-rapportinterval"
+          },
+          "hint": {
+            "en": "This parameter is configures the time interval for light sensor reporting. Larger values will improve the battery life of the unit (unit: seconds).",
+            "nl": "Deze parameter configureert het tijdsinterval voor rapportage van lichtsensoren. Grotere waarden zullen de levensduur van de batterij van het apparaat verbeteren (eenheden: seconden)."
+          },
+          "zwave": {
+            "index": 24,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "value": 3600
+        },
+        {
+          "id": "30",
+          "type": "number",
+          "label": {
+            "en": "Temperature Offset Value",
+            "nl": "Temperatuur offsetwaarde"
+          },
+          "hint": {
+            "en": "This parameter adjusts the currently measured temperature. Temperature Offset Value = [Value] * 0.1 (unit: Celsius/Fahrenheit).",
+            "nl": "Deze parameter past de momenteel gemeten temperatuur aan. Temperatuurcompensatiewaarde = [Waarde] * 0,1 (eenheid: Celsius / Fahrenheit)."
+          },
+          "zwave": {
+            "index": 30,
+            "size": 2
+          },
+          "attr": {
+            "min": -200,
+            "max": 200
+          },
+          "value": 0
+        },
+        {
+          "id": "31",
+          "type": "number",
+          "label": {
+            "en": "Light Intensity Offset Value",
+            "nl": "Lichtintensiteit verschuivingswaarde"
+          },
+          "hint": {
+            "en": "This parameter adjusts the currently measured light intensity (unit: Lux).",
+            "nl": "Deze parameter past de momenteel gemeten lichtintensiteit aan (eenheid: Lux)."
+          },
+          "zwave": {
+            "index": 31,
+            "size": 2
+          },
+          "attr": {
+            "min": -1000,
+            "max": 1000
+          },
+          "value": 0
+        },
+        {
+          "id": "100",
+          "type": "number",
+          "label": {
+            "en": "Light Sensor Calibrated Coefficient",
+            "nl": "Lichtsensor gekalibreerde coëfficiënt"
+          },
+          "hint": {
+            "en": "This configuration defines the calibrated scale for ambient light intensity. Use Luxmeter to calibrate.\nCalibration formula: ([TriSensorValue] / [LuxmeterValue]) * 1024. Round to nearest whole number. (unit: Lux)",
+            "nl": "Deze configuratie definieert de gekalibreerde schaal voor omgevingslichtintensiteit. Gebruik Luxmeter om te kalibreren.\nKalibratieformule: ([TriSensorwaarde] / [LuxmeterValue]) * 1024. Rond naar het dichtstbijzijnde gehele getal."
+          },
+          "zwave": {
+            "index": 100,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "value": 1024
         }
       ]
     },
