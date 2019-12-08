@@ -2,11 +2,9 @@
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class ZW095 extends ZwaveDevice {
+class ZW0953C extends ZwaveDevice {
 
 	onMeshInit() {
-		//this.enableDebug();
-		//this.printNode();
 
 		this.registerCapability('measure_power', 'METER');
 
@@ -19,4 +17,4 @@ class ZW095 extends ZwaveDevice {
 
 }
 
-module.exports = ZW095;
+module.exports = ZW0953C;
