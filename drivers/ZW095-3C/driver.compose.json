@@ -1,7 +1,7 @@
 {
   "id": "ZW095-3C",
   "name": {
-        "en": "Home Energy Meter Gen5 - 3 phase"
+        "en": "Home Energy Meter Gen5 - 3 Phases"
   },
   "class": "sensor",
   "capabilities": [
@@ -22,6 +22,8 @@
     "productId": [
       95
     ],
+    "zwaveAllianceProductId": 2046,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2046/Home%20Energy%20Meter%20Gen5%20manual.pdf",
     "learnmode": {
       "instruction": {
         "en": "Press the action button on the {{driverNameEn}}",
